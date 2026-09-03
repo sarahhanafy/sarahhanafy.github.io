@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarah Hanafy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <h1>Sarah Hanafy</h1>
+      <p class="tagline"><!-- EDIT ME: one-line bio -->building things, one day at a time.</p>
+      <nav class="links">
+        <a href="https://github.com/sarahhanafy" target="_blank" rel="noopener">GitHub</a>
+        <!-- EDIT ME: add more links, e.g.
+        <a href="https://linkedin.com/in/..." target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:you@example.com">Email</a>
+        -->
+      </nav>
+    </header>
+
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        <!-- EDIT ME: a couple of real sentences about you go here. -->
+        Hi, I'm Sarah. This is my small corner of the internet, where I keep
+        a running log of what I'm learning and working on.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Today</h2>
+      <p id="today-date" class="muted"></p>
+      <p id="today-entry">Loading...</p>
+      <p class="muted">Day <span id="day-number">-</span> of this journal.</p>
+    </section>
+
+    <section class="card">
+      <h2>Journal</h2>
+      <p>
+        A running archive of daily notes lives in
+        <a href="JOURNAL.md">JOURNAL.md</a>.
+      </p>
+    </section>
+
+    <footer>
+      <p class="muted">Last updated automatically — see the <a href="https://github.com/sarahhanafy/sarahhanafy.github.io">source</a>.</p>
+    </footer>
+  </div>
+
+  <script>
+    fetch("data/today.json?_=" + Date.now())
+      .then((r) => r.json())
+      .then((data) => {
+        document.getElementById("today-date").textContent = data.date;
+        document.getElementById("today-entry").textContent = data.entry;
+        document.getElementById("day-number").textContent = data.day_number;
+      })
+      .catch(() => {
+        document.getElementById("today-entry").textContent =
+          "Couldn't load today's note.";
+      });
+  </script>
+</body>
+</html>

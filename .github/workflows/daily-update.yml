@@ -1,0 +1,66 @@
+name: Daily update
+
+on:
+  schedule:
+    # 13:00 UTC = 6am PDT / 5am PST. GitHub may delay scheduled runs
+    # by a few minutes on its own, and the jitter step below adds more,
+    # so the actual commit time varies day to day.
+    - cron: "0 13 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Random jitter (skip on manual run)
+        if: github.event_name == 'schedule'
+        run: sleep $(( RANDOM % 5400 ))
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate today's entry
+        run: python3 scripts/update.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "sarahhanafy"
+          git config user.email "shanafy@outlook.com"
+          git add data/today.json JOURNAL.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Daily update: $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No changes to commit."
+          fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
