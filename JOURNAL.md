@@ -6,3 +6,7 @@ A running log of small daily notes.
 
 Reading about CRDTs -- conflict-free replicated data types are wild.
 
+## 2026-09-04 (day 2)
+
+TIL: `git commit --fixup` + `git rebase --autosquash` is a nicer workflow than I expected.
+

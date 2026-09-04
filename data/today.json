@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-03",
-  "day_number": 1,
-  "entry": "Reading about CRDTs -- conflict-free replicated data types are wild.",
-  "updated_at": "2026-09-03T19:38:34+00:00"
+  "date": "2026-09-04",
+  "day_number": 2,
+  "entry": "TIL: `git commit --fixup` + `git rebase --autosquash` is a nicer workflow than I expected.",
+  "updated_at": "2026-09-04T17:38:59+00:00"
 }
