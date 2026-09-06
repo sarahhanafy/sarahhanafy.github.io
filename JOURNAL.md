@@ -14,3 +14,7 @@ TIL: `git commit --fixup` + `git rebase --autosquash` is a nicer workflow than I
 
 Refactored a function from 80 lines to 20. Same output, way less regret.
 
+## 2026-09-06 (day 4)
+
+Trying out a new terminal font. Small joys.
+
