@@ -1,21 +1,25 @@
 :root {
   color-scheme: light dark;
-  --bg: #fafaf9;
-  --fg: #1c1c1a;
-  --muted: #6b6b66;
-  --accent: #2f6f4f;
+  --bg: #faf7f2;
+  --fg: #23211d;
+  --muted: #78746c;
+  --accent: #b5623c;
+  --accent-soft: #f1e3d8;
   --card-bg: #ffffff;
-  --border: #e6e4df;
+  --border: #ece6dc;
+  --shadow: 0 1px 2px rgba(30, 25, 15, 0.04), 0 8px 24px rgba(30, 25, 15, 0.06);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #14140f;
-    --fg: #f2f1ea;
-    --muted: #9a9a92;
-    --accent: #7fd6a3;
-    --card-bg: #1c1c17;
-    --border: #2c2c25;
+    --bg: #17140f;
+    --fg: #f3efe6;
+    --muted: #a39c8e;
+    --accent: #e8a47e;
+    --accent-soft: #362a20;
+    --card-bg: #201b14;
+    --border: #352e23;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px rgba(0, 0, 0, 0.35);
   }
 }
 
@@ -25,30 +29,107 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  line-height: 1.55;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blob-a {
+  width: 420px;
+  height: 420px;
+  top: -180px;
+  right: -140px;
+  background: var(--accent);
+}
+
+.blob-b {
+  width: 320px;
+  height: 320px;
+  bottom: -140px;
+  left: -120px;
+  background: var(--accent-soft);
 }
 
 .wrap {
+  position: relative;
+  z-index: 1;
   max-width: 640px;
   margin: 0 auto;
-  padding: 3rem 1.25rem 4rem;
+  padding: 4rem 1.25rem 4rem;
+  animation: rise 0.5s ease-out;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero { text-align: center; margin-bottom: 2.5rem; }
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  box-shadow: var(--shadow);
 }
 
 .hero h1 {
-  margin: 0 0 0.25rem;
-  font-size: 2rem;
+  margin: 0 0 0.4rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  letter-spacing: -0.01em;
 }
 
 .tagline {
   color: var(--muted);
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
+  font-size: 1.02rem;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.tags li {
+  background: var(--accent-soft);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 500;
 }
 
 .links a {
   color: var(--accent);
   text-decoration: none;
-  margin-right: 1rem;
+  margin: 0 0.5rem;
   font-weight: 600;
 }
 
@@ -57,19 +138,53 @@ body {
 .card {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-top: 1.5rem;
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin-top: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
 }
 
 .card h2 {
   margin-top: 0;
-  font-size: 1.1rem;
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.card p { margin: 0.6rem 0; }
+.card p:last-child { margin-bottom: 0; }
+
+.today-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.today-head h2 { margin: 0; }
+
+.day-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  white-space: nowrap;
+}
+
+.today-entry {
+  font-size: 1.05rem;
 }
 
 .muted {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 footer {

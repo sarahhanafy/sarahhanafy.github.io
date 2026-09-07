@@ -4,16 +4,30 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sarah Hanafy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="blob blob-a" aria-hidden="true"></div>
+  <div class="blob blob-b" aria-hidden="true"></div>
+
   <div class="wrap">
     <header class="hero">
+      <div class="avatar">SH</div>
       <h1>Sarah Hanafy</h1>
-      <p class="tagline"><!-- EDIT ME: one-line bio -->building things, one day at a time.</p>
+      <p class="tagline">CS @ University of Washington &middot; Seattle / Bellevue</p>
+
+      <ul class="tags">
+        <li>SWE Intern, Atlassian (GTM)</li>
+        <li>Prev. Data Eng. Intern, GoDaddy</li>
+        <li>UW Research Assistant</li>
+      </ul>
+
       <nav class="links">
         <a href="https://github.com/sarahhanafy" target="_blank" rel="noopener">GitHub</a>
-        <!-- EDIT ME: add more links, e.g.
+        <!-- add more, e.g.
         <a href="https://linkedin.com/in/..." target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:you@example.com">Email</a>
         -->
@@ -23,17 +37,26 @@
     <section class="card">
       <h2>About</h2>
       <p>
-        <!-- EDIT ME: a couple of real sentences about you go here. -->
-        Hi, I'm Sarah. This is my small corner of the internet, where I keep
-        a running log of what I'm learning and working on.
+        I'm a CS student at the Paul G. Allen School (B.S. expected 2028),
+        minoring in Applied Math and Business Administration. This
+        summer I'm interning on the GTM platform team at Atlassian; before
+        that I worked as a Data Engineer AI intern at GoDaddy.
+      </p>
+      <p>
+        Outside of internships, I'm a Research Assistant at UW, the web
+        developer for TEDxUW, a front-end developer for CAIR-WA, an Allen
+        School Ambassador, and Vice Chair of Muslims in Computer Science
+        &amp; Engineering (MISCE).
       </p>
     </section>
 
-    <section class="card">
-      <h2>Today</h2>
+    <section class="card today-card">
+      <div class="today-head">
+        <h2>Today</h2>
+        <span class="day-badge">Day <span id="day-number">&mdash;</span></span>
+      </div>
       <p id="today-date" class="muted"></p>
-      <p id="today-entry">Loading...</p>
-      <p class="muted">Day <span id="day-number">-</span> of this journal.</p>
+      <p id="today-entry" class="today-entry">Loading&hellip;</p>
     </section>
 
     <section class="card">
@@ -45,7 +68,7 @@
     </section>
 
     <footer>
-      <p class="muted">Last updated automatically — see the <a href="https://github.com/sarahhanafy/sarahhanafy.github.io">source</a>.</p>
+      <p class="muted">Updated automatically &mdash; see the <a href="https://github.com/sarahhanafy/sarahhanafy.github.io">source</a>.</p>
     </footer>
   </div>
 
