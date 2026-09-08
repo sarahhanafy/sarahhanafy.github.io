@@ -22,3 +22,7 @@ Trying out a new terminal font. Small joys.
 
 Watched a talk on database indexing -- B-trees really do hold everything together.
 
+## 2026-09-08 (day 6)
+
+Wrote a test before the code for once. It caught a bug immediately.
+
