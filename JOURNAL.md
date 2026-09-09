@@ -26,3 +26,7 @@ Watched a talk on database indexing -- B-trees really do hold everything togethe
 
 Wrote a test before the code for once. It caught a bug immediately.
 
+## 2026-09-09 (day 7)
+
+Learned the difference between `PUT` and `PATCH` the hard way.
+
