@@ -34,3 +34,7 @@ Learned the difference between `PUT` and `PATCH` the hard way.
 
 Today's win: deleted more code than I wrote.
 
+## 2026-09-11 (day 9)
+
+Experimenting with keyboard-only workflows. My mouse is jealous.
+
