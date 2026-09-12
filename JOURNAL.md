@@ -38,3 +38,7 @@ Today's win: deleted more code than I wrote.
 
 Experimenting with keyboard-only workflows. My mouse is jealous.
 
+## 2026-09-12 (day 10)
+
+Read up on how DNS propagation actually works end to end.
+
