@@ -42,3 +42,7 @@ Experimenting with keyboard-only workflows. My mouse is jealous.
 
 Read up on how DNS propagation actually works end to end.
 
+## 2026-09-13 (day 11)
+
+Docker layer caching finally clicked for me today.
+

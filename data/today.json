@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-12",
-  "day_number": 10,
-  "entry": "Read up on how DNS propagation actually works end to end.",
-  "updated_at": "2026-09-12T16:12:41+00:00"
+  "date": "2026-09-13",
+  "day_number": 11,
+  "entry": "Docker layer caching finally clicked for me today.",
+  "updated_at": "2026-09-13T17:52:00+00:00"
 }
