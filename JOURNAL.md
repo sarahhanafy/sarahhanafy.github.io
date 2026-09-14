@@ -46,3 +46,7 @@ Read up on how DNS propagation actually works end to end.
 
 Docker layer caching finally clicked for me today.
 
+## 2026-09-14 (day 12)
+
+Rubber-ducked a bug to my cat. She was unimpressed but it worked.
+
