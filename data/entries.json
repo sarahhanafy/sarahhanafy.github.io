@@ -1,0 +1,67 @@
+[
+  {
+    "date": "2026-09-03",
+    "day": 1,
+    "entry": "Reading about CRDTs -- conflict-free replicated data types are wild."
+  },
+  {
+    "date": "2026-09-04",
+    "day": 2,
+    "entry": "TIL: `git commit --fixup` + `git rebase --autosquash` is a nicer workflow than I expected."
+  },
+  {
+    "date": "2026-09-05",
+    "day": 3,
+    "entry": "Refactored a function from 80 lines to 20. Same output, way less regret."
+  },
+  {
+    "date": "2026-09-06",
+    "day": 4,
+    "entry": "Trying out a new terminal font. Small joys."
+  },
+  {
+    "date": "2026-09-07",
+    "day": 5,
+    "entry": "Watched a talk on database indexing -- B-trees really do hold everything together."
+  },
+  {
+    "date": "2026-09-08",
+    "day": 6,
+    "entry": "Wrote a test before the code for once. It caught a bug immediately."
+  },
+  {
+    "date": "2026-09-09",
+    "day": 7,
+    "entry": "Learned the difference between `PUT` and `PATCH` the hard way."
+  },
+  {
+    "date": "2026-09-10",
+    "day": 8,
+    "entry": "Today's win: deleted more code than I wrote."
+  },
+  {
+    "date": "2026-09-11",
+    "day": 9,
+    "entry": "Experimenting with keyboard-only workflows. My mouse is jealous."
+  },
+  {
+    "date": "2026-09-12",
+    "day": 10,
+    "entry": "Read up on how DNS propagation actually works end to end."
+  },
+  {
+    "date": "2026-09-13",
+    "day": 11,
+    "entry": "Docker layer caching finally clicked for me today."
+  },
+  {
+    "date": "2026-09-14",
+    "day": 12,
+    "entry": "Rubber-ducked a bug to my cat. She was unimpressed but it worked."
+  },
+  {
+    "date": "2026-09-15",
+    "day": 13,
+    "entry": "Learned about idempotency keys in payment APIs -- such a clean idea."
+  }
+]

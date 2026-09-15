@@ -6,6 +6,8 @@ on:
     # by a few minutes on its own, and the jitter step below adds more,
     # so the actual commit time varies day to day.
     - cron: "0 13 * * *"
+  push:
+    branches: [main]
   workflow_dispatch: {}
 
 permissions:
@@ -45,7 +47,7 @@ jobs:
         run: |
           git config user.name "sarahhanafy"
           git config user.email "shanafy@outlook.com"
-          git add data/today.json JOURNAL.md
+          git add data/today.json data/entries.json JOURNAL.md
           if ! git diff --cached --quiet; then
             git commit -m "Daily update: $(date -u +%Y-%m-%d)"
             git push

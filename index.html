@@ -4,86 +4,109 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sarah Hanafy</title>
+  <meta name="description" content="Sarah Hanafy — CS student at the University of Washington. Daily notes, projects, and things I'm learning." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f9a8d4'/%3E%3Cstop offset='0.55' stop-color='%23a5b4fc'/%3E%3Cstop offset='1' stop-color='%2399e9d2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Verdana,sans-serif' font-size='25' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ESH%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="blob blob-a" aria-hidden="true"></div>
-  <div class="blob blob-b" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
 
-  <div class="wrap">
-    <header class="hero">
-      <div class="avatar">SH</div>
-      <h1>Sarah Hanafy</h1>
-      <p class="tagline">CS @ University of Washington &middot; Seattle / Bellevue</p>
+  <div class="blobs" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+    <span class="blob blob-4"></span>
+  </div>
+
+  <main class="wrap">
+    <header class="hero reveal">
+      <button class="avatar" id="avatar" type="button" aria-label="Sparkles!">
+        <span>SH</span>
+      </button>
+      <h1 class="name">Sarah Hanafy</h1>
+      <p class="tagline">CS&nbsp;@ University of Washington <span class="dot">&bull;</span> Seattle / Bellevue</p>
 
       <ul class="tags">
-        <li>SWE Intern, Atlassian (GTM)</li>
-        <li>Prev. Data Eng. Intern, GoDaddy</li>
-        <li>UW Research Assistant</li>
+        <li class="tag tag-1">SWE Intern @ Atlassian</li>
+        <li class="tag tag-2">prev. GoDaddy</li>
+        <li class="tag tag-3">UW Research Assistant</li>
+        <li class="tag tag-4">TEDxUW</li>
       </ul>
 
       <nav class="links">
-        <a href="https://github.com/sarahhanafy" target="_blank" rel="noopener">GitHub</a>
+        <a class="link-chip" href="https://github.com/sarahhanafy" target="_blank" rel="noopener">GitHub</a>
         <!-- add more, e.g.
-        <a href="https://linkedin.com/in/..." target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:you@example.com">Email</a>
+        <a class="link-chip" href="https://linkedin.com/in/..." target="_blank" rel="noopener">LinkedIn</a>
+        <a class="link-chip" href="mailto:you@example.com">Email</a>
         -->
       </nav>
     </header>
 
-    <section class="card">
-      <h2>About</h2>
+    <section class="card reveal">
+      <h2><span class="h2-mark">&#10022;</span> about</h2>
       <p>
         I'm a CS student at the Paul G. Allen School (B.S. expected 2028),
-        minoring in Applied Math and Business Administration. This
-        summer I'm interning on the GTM platform team at Atlassian; before
-        that I worked as a Data Engineer AI intern at GoDaddy.
+        minoring in Applied Math and Business Administration. This summer
+        I'm interning on the GTM platform team at Atlassian; before that I
+        worked as a Data Engineer AI intern at GoDaddy.
       </p>
       <p>
-        Outside of internships, I'm a Research Assistant at UW, the web
+        Outside of internships I'm a Research Assistant at UW, the web
         developer for TEDxUW, a front-end developer for CAIR-WA, an Allen
         School Ambassador, and Vice Chair of Muslims in Computer Science
-        &amp; Engineering (MISCE).
+        &amp; Engineering.
       </p>
     </section>
 
-    <section class="card today-card">
+    <section class="card card-today reveal">
       <div class="today-head">
-        <h2>Today</h2>
-        <span class="day-badge">Day <span id="day-number">&mdash;</span></span>
+        <h2><span class="h2-mark">&#10022;</span> today</h2>
+        <span class="day-badge">day <span id="day-number">&mdash;</span></span>
       </div>
-      <p id="today-date" class="muted"></p>
-      <p id="today-entry" class="today-entry">Loading&hellip;</p>
+      <p class="today-date muted" id="today-date"></p>
+      <p class="today-entry" id="today-entry">loading&hellip;</p>
     </section>
 
-    <section class="card">
-      <h2>Journal</h2>
-      <p>
-        A running archive of daily notes lives in
-        <a href="JOURNAL.md">JOURNAL.md</a>.
+    <section class="card reveal">
+      <div class="today-head">
+        <h2><span class="h2-mark">&#10022;</span> streak</h2>
+        <span class="streak-count" id="streak-count"></span>
+      </div>
+      <div class="heatmap-scroll">
+        <div class="heatmap" id="heatmap" role="img" aria-label="Calendar of daily journal entries"></div>
+      </div>
+      <div class="heatmap-legend">
+        <span class="muted">less</span>
+        <span class="legend-cell l0"></span>
+        <span class="legend-cell l1"></span>
+        <span class="legend-cell l2"></span>
+        <span class="legend-cell l3"></span>
+        <span class="muted">more</span>
+      </div>
+    </section>
+
+    <section class="card reveal">
+      <div class="today-head">
+        <h2><span class="h2-mark">&#10022;</span> journal</h2>
+        <span class="muted" id="journal-count"></span>
+      </div>
+      <ol class="timeline" id="timeline"></ol>
+      <button class="show-more" id="show-more" type="button" hidden>show all entries</button>
+    </section>
+
+    <footer class="reveal">
+      <p class="muted">
+        updated automatically every day &mdash;
+        <a href="https://github.com/sarahhanafy/sarahhanafy.github.io">source</a>
       </p>
-    </section>
-
-    <footer>
-      <p class="muted">Updated automatically &mdash; see the <a href="https://github.com/sarahhanafy/sarahhanafy.github.io">source</a>.</p>
     </footer>
-  </div>
+  </main>
 
-  <script>
-    fetch("data/today.json?_=" + Date.now())
-      .then((r) => r.json())
-      .then((data) => {
-        document.getElementById("today-date").textContent = data.date;
-        document.getElementById("today-entry").textContent = data.entry;
-        document.getElementById("day-number").textContent = data.day_number;
-      })
-      .catch(() => {
-        document.getElementById("today-entry").textContent =
-          "Couldn't load today's note.";
-      });
-  </script>
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
