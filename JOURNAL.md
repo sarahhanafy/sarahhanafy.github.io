@@ -50,3 +50,7 @@ Docker layer caching finally clicked for me today.
 
 Rubber-ducked a bug to my cat. She was unimpressed but it worked.
 
+## 2026-09-15 (day 13)
+
+Learned about idempotency keys in payment APIs -- such a clean idea.
+
