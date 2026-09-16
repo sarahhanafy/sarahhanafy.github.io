@@ -4,103 +4,107 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sarah Hanafy</title>
-  <meta name="description" content="Sarah Hanafy — CS student at the University of Washington. Daily notes, projects, and things I'm learning." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f9a8d4'/%3E%3Cstop offset='0.55' stop-color='%23a5b4fc'/%3E%3Cstop offset='1' stop-color='%2399e9d2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='43' font-family='Verdana,sans-serif' font-size='25' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ESH%3C/text%3E%3C/svg%3E" />
+  <meta name="description" content="Sarah Hanafy — computer science student at the University of Washington." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23faf9f7'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' fill='%231a1a18' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="cursor-glow" aria-hidden="true"></div>
-
-  <div class="blobs" aria-hidden="true">
-    <span class="blob blob-1"></span>
-    <span class="blob blob-2"></span>
-    <span class="blob blob-3"></span>
-    <span class="blob blob-4"></span>
-  </div>
-
-  <main class="wrap">
-    <header class="hero reveal">
-      <button class="avatar" id="avatar" type="button" aria-label="Sparkles!">
-        <span>SH</span>
-      </button>
-      <h1 class="name">Sarah Hanafy</h1>
-      <p class="tagline">CS&nbsp;@ University of Washington <span class="dot">&bull;</span> Seattle / Bellevue</p>
-
-      <ul class="tags">
-        <li class="tag tag-1">SWE Intern @ Atlassian</li>
-        <li class="tag tag-2">prev. GoDaddy</li>
-        <li class="tag tag-3">UW Research Assistant</li>
-        <li class="tag tag-4">TEDxUW</li>
-      </ul>
-
-      <nav class="links">
-        <a class="link-chip" href="https://github.com/sarahhanafy" target="_blank" rel="noopener">GitHub</a>
-        <!-- add more, e.g.
-        <a class="link-chip" href="https://linkedin.com/in/..." target="_blank" rel="noopener">LinkedIn</a>
-        <a class="link-chip" href="mailto:you@example.com">Email</a>
-        -->
-      </nav>
+  <main>
+    <header>
+      <h1>Sarah Hanafy</h1>
+      <p class="lede">
+        Computer science student at the University of Washington, based in Seattle.
+      </p>
     </header>
 
-    <section class="card reveal">
-      <h2><span class="h2-mark">&#10022;</span> about</h2>
+    <section>
       <p>
-        I'm a CS student at the Paul G. Allen School (B.S. expected 2028),
-        minoring in Applied Math and Business Administration. This summer
-        I'm interning on the GTM platform team at Atlassian; before that I
-        worked as a Data Engineer AI intern at GoDaddy.
+        I study computer science at the Paul G. Allen School, where I'm also
+        minoring in applied mathematics and business administration. I expect
+        to graduate in 2028.
       </p>
       <p>
-        Outside of internships I'm a Research Assistant at UW, the web
-        developer for TEDxUW, a front-end developer for CAIR-WA, an Allen
-        School Ambassador, and Vice Chair of Muslims in Computer Science
-        &amp; Engineering.
+        I spent the summer of 2026 on the GTM platform team at Atlassian as a
+        software engineering intern, and before that worked on data engineering
+        and AI at GoDaddy. Alongside school I do research at UW, build websites
+        for TEDxUW and CAIR-WA, and help run the Allen School's ambassador
+        program.
       </p>
+      <!-- A sentence or two here about what you actually care about would make
+           this page yours -- what you like building, what you're curious about. -->
     </section>
 
-    <section class="card card-today reveal">
-      <div class="today-head">
-        <h2><span class="h2-mark">&#10022;</span> today</h2>
-        <span class="day-badge">day <span id="day-number">&mdash;</span></span>
-      </div>
-      <p class="today-date muted" id="today-date"></p>
-      <p class="today-entry" id="today-entry">loading&hellip;</p>
+    <section>
+      <h2>Experience</h2>
+      <!-- Add dates in the <span class="meta"> lines as you like. -->
+      <ul class="listing">
+        <li>
+          <span class="role">Software Engineering Intern</span>
+          <span class="org">Atlassian &middot; GTM platform</span>
+          <span class="meta">Summer 2026</span>
+        </li>
+        <li>
+          <span class="role">Data Engineering &amp; AI Intern</span>
+          <span class="org">GoDaddy</span>
+          <span class="meta"></span>
+        </li>
+        <li>
+          <span class="role">Research Assistant</span>
+          <span class="org">University of Washington</span>
+          <span class="meta"></span>
+        </li>
+        <li>
+          <span class="role">Web Developer</span>
+          <span class="org">TEDxUW</span>
+          <span class="meta"></span>
+        </li>
+        <li>
+          <span class="role">Front-End Developer</span>
+          <span class="org">CAIR-WA</span>
+          <span class="meta"></span>
+        </li>
+      </ul>
     </section>
 
-    <section class="card reveal">
-      <div class="today-head">
-        <h2><span class="h2-mark">&#10022;</span> streak</h2>
-        <span class="streak-count" id="streak-count"></span>
-      </div>
-      <div class="heatmap-scroll">
-        <div class="heatmap" id="heatmap" role="img" aria-label="Calendar of daily journal entries"></div>
-      </div>
-      <div class="heatmap-legend">
-        <span class="muted">less</span>
-        <span class="legend-cell l0"></span>
-        <span class="legend-cell l1"></span>
-        <span class="legend-cell l2"></span>
-        <span class="legend-cell l3"></span>
-        <span class="muted">more</span>
-      </div>
+    <section>
+      <h2>Around campus</h2>
+      <ul class="listing">
+        <li>
+          <span class="role">Vice Chair</span>
+          <span class="org">Muslims in Computer Science &amp; Engineering</span>
+          <span class="meta"></span>
+        </li>
+        <li>
+          <span class="role">Ambassador</span>
+          <span class="org">Paul G. Allen School</span>
+          <span class="meta"></span>
+        </li>
+      </ul>
     </section>
 
-    <section class="card reveal">
-      <div class="today-head">
-        <h2><span class="h2-mark">&#10022;</span> journal</h2>
-        <span class="muted" id="journal-count"></span>
+    <section>
+      <h2>Notes</h2>
+      <p class="section-note">
+        A short note most days about something I read, broke, or figured out.
+      </p>
+
+      <div class="grid-wrap">
+        <div class="grid" id="heatmap" role="img" aria-label="Calendar of daily notes"></div>
+        <p class="grid-caption muted" id="streak-count"></p>
       </div>
-      <ol class="timeline" id="timeline"></ol>
-      <button class="show-more" id="show-more" type="button" hidden>show all entries</button>
+
+      <ol class="notes" id="timeline"></ol>
+      <button class="text-button" id="show-more" type="button" hidden>Show all notes</button>
     </section>
 
-    <footer class="reveal">
-      <p class="muted">
-        updated automatically every day &mdash;
-        <a href="https://github.com/sarahhanafy/sarahhanafy.github.io">source</a>
+    <footer>
+      <p>
+        <a href="https://github.com/sarahhanafy">GitHub</a>
+        <!-- <a href="https://linkedin.com/in/...">LinkedIn</a> -->
+        <!-- <a href="mailto:you@example.com">Email</a> -->
       </p>
     </footer>
   </main>
