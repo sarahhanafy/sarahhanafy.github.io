@@ -3,10 +3,13 @@
 Builds data/graphics.json from whatever is sitting in graphics/.
 
 Folders become sections on the design page. Make a folder for each one --
-graphics/2024/, graphics/2025/, graphics/tedxuw/ -- and drop images inside.
-Sections are listed oldest first, sorted by folder name, so numeric names
-like years order themselves. Anything left loose in graphics/ shows up in
-its own section at the end.
+graphics/01-maps-youth/, graphics/02-wamy4p/ -- and drop images inside.
+
+Number the folders OLDEST FIRST. The page shows them newest first, so the
+highest-numbered folder sits at the top: a new section just needs the next
+number and it lands at the top on its own, no renumbering. Images inside a
+folder run in filename order, top of the section to the end of the row.
+Anything left loose in graphics/ shows up in its own section at the bottom.
 
 Titles are guessed from filenames: "tedxuw-poster.png" becomes "TEDxUW
 Poster". Titles, captions and the order of entries that you've edited in
@@ -78,8 +81,10 @@ def collect():
         elif os.path.splitext(entry)[1].lower() in EXTENSIONS:
             found.append((entry, ""))
 
-    # Folders first (oldest section at the top), loose files last.
-    found.sort(key=lambda item: (item[1] == "", item[1], item[0]))
+    # Filenames ascending within a folder, then newest folder first.
+    # Two stable passes: the second only reorders sections.
+    found.sort(key=lambda item: item[0])
+    found.sort(key=lambda item: item[1], reverse=True)
     return found
 
 
