@@ -34,7 +34,7 @@ ACRONYMS = {
 }
 
 # Words that stay lowercase in a title unless they lead it.
-SMALL_WORDS = {"and", "or", "of", "the", "a", "an", "at", "in", "on", "for",
+SMALL_WORDS = {"and", "or", "of", "the", "a", "an", "at", "in", "on", "for", "as",
                "to", "with", "from", "by"}
 
 
