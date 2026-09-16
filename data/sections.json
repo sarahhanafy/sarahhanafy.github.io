@@ -1,30 +1,37 @@
 {
   "01-maps-youth": {
     "dates": "Fall 2023 \u2013 Spring 2024",
+    "instagram": "https://www.instagram.com/maps_youth/",
     "title": "MAPS Youth"
   },
   "02-wamy4p": {
     "dates": "Spring 2024 \u2013 Summer 2025",
+    "instagram": "https://www.instagram.com/wamy4p/",
     "title": "WAMY4P"
   },
   "03-maps-sunday-school": {
     "dates": "Fall 2023 \u2013 Winter 2026",
+    "instagram": "https://www.instagram.com/mapssundayschool/",
     "title": "MAPS Sunday School"
   },
   "04-cair-wa": {
     "dates": "Winter 2025",
+    "instagram": "https://www.instagram.com/cairwashington/",
     "title": "CAIR-WA"
   },
   "05-maps-summit": {
     "dates": "Spring 2026 \u2013 Present",
+    "instagram": "",
     "title": "MAPS Summit"
   },
   "06-muslims-in-cse": {
     "dates": "Spring 2025 \u2013 Present",
+    "instagram": "https://www.instagram.com/muslimsincse/",
     "title": "Muslims in CSE"
   },
   "07-arab-student-association": {
     "dates": "Fall 2026 \u2013 Present",
+    "instagram": "https://www.instagram.com/asa.uw/",
     "title": "Arab Student Association"
   }
 }

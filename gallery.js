@@ -45,6 +45,7 @@
         labels[key] = {
           title: item.section_title || item.section || "More",
           dates: item.section_dates || "",
+          instagram: item.section_instagram || "",
         };
       }
       groups[key].push(item);
@@ -78,6 +79,21 @@
       dates.className = "shelf-dates";
       dates.textContent = label.dates;
       titleWrap.appendChild(dates);
+    }
+
+    if (label.instagram) {
+      var ig = document.createElement("a");
+      ig.className = "shelf-ig";
+      ig.href = label.instagram;
+      ig.target = "_blank";
+      ig.rel = "noopener";
+      // Show the handle rather than the whole URL.
+      ig.textContent = "@" + label.instagram
+        .replace(/\/+$/, "")
+        .split("/")
+        .pop();
+      ig.setAttribute("aria-label", label.title + " on Instagram");
+      titleWrap.appendChild(ig);
     }
 
     head.appendChild(titleWrap);

@@ -133,8 +133,8 @@ def collect():
 
 
 def load_sections():
-    """Folder -> {title, dates}. New folders are scaffolded with a blank
-    date range for you to fill in; anything you've typed is kept."""
+    """Folder -> {title, dates, instagram}. New folders are scaffolded with
+    blank fields for you to fill in; anything you've typed is kept."""
     meta = {}
     if os.path.exists(SECTIONS_JSON):
         try:
@@ -162,7 +162,7 @@ def main():
     meta = load_sections()
     for _, folder in found:
         if folder and folder not in meta:
-            meta[folder] = {"title": prettify(folder), "dates": ""}
+            meta[folder] = {"title": prettify(folder), "dates": "", "instagram": ""}
     for folder in list(meta):
         if folder not in {f for _, f in found}:
             del meta[folder]
@@ -187,6 +187,7 @@ def main():
         info = meta.get(folder, {})
         entry["section_title"] = info.get("title") or prettify(folder)
         entry["section_dates"] = info.get("dates", "")
+        entry["section_instagram"] = info.get("instagram", "")
         return entry
 
     # Order always follows the scan -- newest folder first, filenames in
