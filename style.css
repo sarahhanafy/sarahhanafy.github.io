@@ -80,13 +80,13 @@ body {
   letter-spacing: 0.12em;
   color: var(--white);
   text-decoration: none;
-  border: 2px solid rgba(255, 255, 255, 0.55);
+  border: 2px solid var(--gold);
   border-radius: 4px;
   padding: 0.3rem 0.7rem;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 
-.nav-mark:hover { border-color: var(--white); }
+.nav-mark:hover { color: var(--gold); }
 
 .nav nav { display: flex; gap: 0.35rem; }
 
