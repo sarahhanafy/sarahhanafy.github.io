@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Design — Sarah Hanafy</title>
+  <meta name="description" content="Graphic design work by Sarah Hanafy." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%234b2e83'/%3E%3Ctext x='32' y='45' font-family='Helvetica,Arial,sans-serif' font-size='34' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ESH%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=5" />
+</head>
+<body>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>posters &nbsp;✦&nbsp; flyers &nbsp;✦&nbsp; slides &nbsp;✦&nbsp; social graphics &nbsp;✦&nbsp; things i made in canva &nbsp;✦&nbsp;</span>
+      <span>posters &nbsp;✦&nbsp; flyers &nbsp;✦&nbsp; slides &nbsp;✦&nbsp; social graphics &nbsp;✦&nbsp; things i made in canva &nbsp;✦&nbsp;</span>
+    </div>
+  </div>
+
+  <header class="nav">
+    <a class="nav-mark" href="index.html">SH</a>
+    <nav>
+      <a href="index.html#about">about</a>
+      <a href="index.html#work">work</a>
+      <a class="current" href="design.html">design</a>
+      <a href="index.html#notes">notes</a>
+    </nav>
+  </header>
+
+  <section class="hero hero-short">
+    <div class="hero-inner">
+      <h1>DESIGN</h1>
+      <p class="hero-tag">posters, flyers, and everything else i've made</p>
+    </div>
+  </section>
+
+  <section class="band band-white">
+    <div class="inner">
+      <div class="gallery" id="gallery"></div>
+
+      <div class="empty" id="empty" hidden>
+        <h2>Nothing here yet</h2>
+        <p class="prose">
+          To add a graphic, drop the image file into the
+          <code>graphics/</code> folder in this project and push. The title
+          comes from the filename &mdash; <code>tedxuw-poster.png</code> shows
+          up as &ldquo;TEDxUW Poster&rdquo; &mdash; and you can edit any title
+          or add a caption afterwards in <code>data/graphics.json</code>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="inner footer-inner">
+      <span class="foot-mark">SARAH HANAFY</span>
+      <span class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/sarahhanafy" target="_blank" rel="noopener">GitHub</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">&times;</button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Previous">&#8249;</button>
+    <figure class="lightbox-figure">
+      <img id="lightbox-img" alt="" />
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next">&#8250;</button>
+  </div>
+
+  <script src="gallery.js?v=5"></script>
+</body>
+</html>

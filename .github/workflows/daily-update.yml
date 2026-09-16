@@ -43,11 +43,14 @@ jobs:
       - name: Generate today's entry
         run: python3 scripts/update.py
 
+      - name: Index the design gallery
+        run: python3 scripts/graphics.py
+
       - name: Commit and push
         run: |
           git config user.name "sarahhanafy"
           git config user.email "shanafy@outlook.com"
-          git add data/today.json data/entries.json JOURNAL.md
+          git add data/today.json data/entries.json data/graphics.json JOURNAL.md
           if ! git diff --cached --quiet; then
             git commit -m "Daily update: $(date -u +%Y-%m-%d)"
             git push
