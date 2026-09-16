@@ -74,13 +74,6 @@
     heading.textContent = label.title;
     titleWrap.appendChild(heading);
 
-    if (label.dates) {
-      var dates = document.createElement("span");
-      dates.className = "shelf-dates";
-      dates.textContent = label.dates;
-      titleWrap.appendChild(dates);
-    }
-
     if (label.instagram) {
       var ig = document.createElement("a");
       ig.className = "shelf-ig";
@@ -98,6 +91,17 @@
 
     head.appendChild(titleWrap);
 
+    // Dates sit with the controls on the right, out of the title's way.
+    var right = document.createElement("div");
+    right.className = "shelf-right";
+
+    if (label.dates) {
+      var dates = document.createElement("span");
+      dates.className = "shelf-dates";
+      dates.textContent = label.dates;
+      right.appendChild(dates);
+    }
+
     var controls = document.createElement("div");
     controls.className = "shelf-controls";
 
@@ -105,7 +109,9 @@
     var next = arrowButton("›", "Scroll right");
     controls.appendChild(prev);
     controls.appendChild(next);
-    head.appendChild(controls);
+    right.appendChild(controls);
+
+    head.appendChild(right);
 
     section.appendChild(head);
 
