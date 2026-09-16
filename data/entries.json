@@ -63,5 +63,10 @@
     "date": "2026-09-15",
     "day": 13,
     "entry": "Learned about idempotency keys in payment APIs -- such a clean idea."
+  },
+  {
+    "date": "2026-09-16",
+    "day": 14,
+    "entry": "Started sketching out a side project. No promises on when it ships."
   }
 ]

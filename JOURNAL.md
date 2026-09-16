@@ -54,3 +54,7 @@ Rubber-ducked a bug to my cat. She was unimpressed but it worked.
 
 Learned about idempotency keys in payment APIs -- such a clean idea.
 
+## 2026-09-16 (day 14)
+
+Started sketching out a side project. No promises on when it ships.
+
