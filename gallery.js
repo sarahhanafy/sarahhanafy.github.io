@@ -1,12 +1,14 @@
 /* Sarah Hanafy — design gallery
-   Renders graphics/ from data/graphics.json, with a lightbox. */
+   One horizontally scrolling row per section, oldest section first,
+   with a lightbox that steps through every image in order. */
 
 (function () {
   "use strict";
 
   var gallery = document.getElementById("gallery");
   var empty = document.getElementById("empty");
-  var items = [];
+
+  var flat = [];   // every item, in render order — the lightbox walks this
   var index = 0;
 
   var box = document.getElementById("lightbox");
@@ -20,16 +22,63 @@
     .catch(function () { render([]); });
 
   function render(data) {
-    items = Array.isArray(data) ? data.filter(function (d) { return d && d.file; }) : [];
+    var items = Array.isArray(data)
+      ? data.filter(function (d) { return d && d.file; })
+      : [];
 
     if (!items.length) {
       if (empty) empty.hidden = false;
       return;
     }
 
+    // Group into sections, preserving the order the entries arrive in.
+    var order = [];
+    var groups = {};
+
+    items.forEach(function (item) {
+      var key = item.section || "";
+      if (!(key in groups)) { groups[key] = []; order.push(key); }
+      groups[key].push(item);
+    });
+
     var frag = document.createDocumentFragment();
 
-    items.forEach(function (item, i) {
+    order.forEach(function (key) {
+      frag.appendChild(buildSection(key, groups[key]));
+    });
+
+    gallery.appendChild(frag);
+  }
+
+  function buildSection(label, items) {
+    var section = document.createElement("section");
+    section.className = "shelf";
+
+    var head = document.createElement("div");
+    head.className = "shelf-head";
+
+    var heading = document.createElement("h2");
+    heading.textContent = label || "More";
+    head.appendChild(heading);
+
+    var controls = document.createElement("div");
+    controls.className = "shelf-controls";
+
+    var prev = arrowButton("‹", "Scroll left");
+    var next = arrowButton("›", "Scroll right");
+    controls.appendChild(prev);
+    controls.appendChild(next);
+    head.appendChild(controls);
+
+    section.appendChild(head);
+
+    var rail = document.createElement("div");
+    rail.className = "rail";
+
+    items.forEach(function (item) {
+      var position = flat.length;
+      flat.push(item);
+
       var button = document.createElement("button");
       button.className = "tile";
       button.type = "button";
@@ -54,17 +103,53 @@
         button.appendChild(note);
       }
 
-      button.addEventListener("click", function () { open(i, button); });
-      frag.appendChild(button);
+      button.addEventListener("click", function () { open(position, button); });
+      rail.appendChild(button);
     });
 
-    gallery.appendChild(frag);
+    section.appendChild(rail);
+
+    function scrollBy(direction) {
+      rail.scrollBy({
+        left: direction * Math.max(240, rail.clientWidth * 0.8),
+        behavior: "smooth",
+      });
+    }
+
+    prev.addEventListener("click", function () { scrollBy(-1); });
+    next.addEventListener("click", function () { scrollBy(1); });
+
+    // Hide the arrows when there's nothing to scroll to.
+    function syncArrows() {
+      var overflow = rail.scrollWidth - rail.clientWidth;
+      controls.hidden = overflow < 8;
+      prev.disabled = rail.scrollLeft < 8;
+      next.disabled = rail.scrollLeft > overflow - 8;
+    }
+
+    rail.addEventListener("scroll", syncArrows, { passive: true });
+    window.addEventListener("resize", syncArrows);
+    // Images load late and change scrollWidth, so re-check after they land.
+    setTimeout(syncArrows, 0);
+    setTimeout(syncArrows, 600);
+    window.addEventListener("load", syncArrows);
+
+    return section;
+  }
+
+  function arrowButton(glyph, label) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "shelf-arrow";
+    b.textContent = glyph;
+    b.setAttribute("aria-label", label);
+    return b;
   }
 
   /* ---------- lightbox ---------- */
 
   function open(i, trigger) {
-    if (!box || !items.length) return;
+    if (!box || !flat.length) return;
     lastFocused = trigger || null;
     index = i;
     show();
@@ -75,13 +160,17 @@
   }
 
   function show() {
-    var item = items[index];
+    var item = flat[index];
     if (!item) return;
     boxImg.src = "graphics/" + item.file;
     boxImg.alt = item.title || item.file;
-    boxCaption.textContent = item.note
-      ? (item.title || item.file) + " — " + item.note
-      : (item.title || item.file);
+
+    var name = item.title || item.file;
+    var bits = [];
+    if (item.section) bits.push(item.section);
+    bits.push(name);
+    if (item.note) bits.push(item.note);
+    boxCaption.textContent = bits.join(" — ");
   }
 
   function close() {
@@ -93,8 +182,8 @@
   }
 
   function step(delta) {
-    if (!items.length) return;
-    index = (index + delta + items.length) % items.length;
+    if (!flat.length) return;
+    index = (index + delta + flat.length) % flat.length;
     show();
   }
 

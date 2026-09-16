@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
 
@@ -44,11 +44,17 @@
       <div class="empty" id="empty" hidden>
         <h2>Nothing here yet</h2>
         <p class="prose">
-          To add a graphic, drop the image file into the
-          <code>graphics/</code> folder in this project and push. The title
-          comes from the filename &mdash; <code>tedxuw-poster.png</code> shows
-          up as &ldquo;TEDxUW Poster&rdquo; &mdash; and you can edit any title
-          or add a caption afterwards in <code>data/graphics.json</code>.
+          Sections come from folders. Make a folder inside
+          <code>graphics/</code> named for the section &mdash;
+          <code>graphics/2024/</code>, <code>graphics/tedxuw/</code> &mdash;
+          drop your images in, and push. Sections are listed oldest first by
+          folder name, so years sort themselves.
+        </p>
+        <p>
+          Titles come from filenames: <code>tedxuw-poster.png</code> shows up
+          as &ldquo;TEDxUW Poster&rdquo;. You can edit any title or add a
+          caption afterwards in <code>data/graphics.json</code> and it'll
+          stick.
         </p>
       </div>
     </div>
@@ -75,6 +81,6 @@
     <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Next">&#8250;</button>
   </div>
 
-  <script src="gallery.js?v=6"></script>
+  <script src="gallery.js?v=7"></script>
 </body>
 </html>
