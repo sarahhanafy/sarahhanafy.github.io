@@ -110,19 +110,8 @@
       img.alt = item.title || item.file;
       img.loading = "lazy";
 
-      var cap = document.createElement("span");
-      cap.className = "tile-title";
-      cap.textContent = item.title || item.file;
-
+      // No caption on the tile itself -- the title shows in the lightbox.
       button.appendChild(img);
-      button.appendChild(cap);
-
-      if (item.note) {
-        var note = document.createElement("span");
-        note.className = "tile-note";
-        note.textContent = item.note;
-        button.appendChild(note);
-      }
 
       button.addEventListener("click", function () { open(position, button); });
       rail.appendChild(button);

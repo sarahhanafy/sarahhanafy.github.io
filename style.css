@@ -440,7 +440,7 @@ footer a:hover { color: var(--white); text-decoration: underline; text-underline
 
 .shelf-title {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
@@ -502,12 +502,9 @@ footer a:hover { color: var(--white); text-decoration: underline; text-underline
 }
 
 .tile {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  text-align: left;
-  gap: 0.6rem;
+  display: block;
   padding: 0;
+  line-height: 0;
   border: 2px solid var(--line);
   border-radius: 4px;
   background: var(--white);
@@ -533,23 +530,6 @@ footer a:hover { color: var(--white); text-decoration: underline; text-underline
   object-fit: contain;
   background: var(--lav);
 }
-
-.tile-title {
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--ink);
-  padding: 0 0.9rem;
-}
-
-.tile-note {
-  font-family: "Space Mono", monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  color: var(--muted);
-  padding: 0 0.9rem 0.9rem;
-}
-
-.tile-title:last-child { padding-bottom: 0.9rem; }
 
 .empty h2 { margin-bottom: 0.75rem; }
 
