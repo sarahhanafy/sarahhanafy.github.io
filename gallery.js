@@ -110,6 +110,14 @@
       img.alt = item.title || item.file;
       img.loading = "lazy";
 
+      // Real dimensions let the tile take the artwork's shape and reserve
+      // the right width before the file loads, so the row doesn't reflow.
+      if (item.w && item.h) {
+        img.width = item.w;
+        img.height = item.h;
+        button.style.setProperty("--ratio", item.w + " / " + item.h);
+      }
+
       // No caption on the tile itself -- the title shows in the lightbox.
       button.appendChild(img);
 

@@ -18,6 +18,7 @@ captions you've edited in that file ARE kept.
 """
 import json
 import os
+import struct
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GRAPHICS_DIR = os.path.join(ROOT, "graphics")
@@ -39,6 +40,49 @@ ACRONYMS = {
 # Words that stay lowercase in a title unless they lead it.
 SMALL_WORDS = {"and", "or", "of", "the", "a", "an", "at", "in", "on", "for", "as",
                "to", "with", "from", "by"}
+
+
+def image_size(path):
+    """(width, height) straight from the file header. Returns None if the
+    format isn't one we can read -- callers just fall back to a default
+    aspect ratio. Deliberately avoids Pillow so the workflow needs no
+    extra install."""
+    try:
+        with open(path, "rb") as f:
+            head = f.read(32)
+
+            # PNG
+            if head[:8] == b"\x89PNG\r\n\x1a\n":
+                return struct.unpack(">II", head[16:24])
+
+            # GIF
+            if head[:6] in (b"GIF87a", b"GIF89a"):
+                return struct.unpack("<HH", head[6:10])
+
+            # JPEG -- walk the segments to a start-of-frame marker
+            if head[:2] == b"\xff\xd8":
+                f.seek(2)
+                while True:
+                    byte = f.read(1)
+                    while byte and byte != b"\xff":
+                        byte = f.read(1)
+                    marker = f.read(1)
+                    while marker == b"\xff":
+                        marker = f.read(1)
+                    if not marker:
+                        return None
+                    code = marker[0]
+                    if code in (0xD8, 0xD9) or 0xD0 <= code <= 0xD7:
+                        continue
+                    length = struct.unpack(">H", f.read(2))[0]
+                    if 0xC0 <= code <= 0xCF and code not in (0xC4, 0xC8, 0xCC):
+                        data = f.read(5)
+                        height, width = struct.unpack(">HH", data[1:5])
+                        return width, height
+                    f.seek(length - 2, 1)
+    except (OSError, struct.error, IndexError):
+        return None
+    return None
 
 
 def prettify(text):
@@ -153,11 +197,15 @@ def main():
     entries = []
     for path, section in found:
         old_entry = previous.get(path, {})
-        entries.append(decorate({
+        entry = {
             "file": path,
             "title": old_entry.get("title") or title_from_filename(path),
             "note": old_entry.get("note", ""),
-        }))
+        }
+        size = image_size(os.path.join(GRAPHICS_DIR, path))
+        if size:
+            entry["w"], entry["h"] = size
+        entries.append(decorate(entry))
 
     with open(GRAPHICS_JSON, "w") as f:
         json.dump(entries, f, indent=2)
