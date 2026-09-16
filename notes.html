@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes — Sarah Hanafy</title>
+  <meta name="description" content="A short note most days from Sarah Hanafy — something read, broken, or figured out." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%234b2e83'/%3E%3Ctext x='32' y='45' font-family='Helvetica,Arial,sans-serif' font-size='34' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ESH%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=12" />
+</head>
+<body>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>one note a day &nbsp;✦&nbsp; something read, broken, or figured out &nbsp;✦&nbsp;</span>
+      <span>one note a day &nbsp;✦&nbsp; something read, broken, or figured out &nbsp;✦&nbsp;</span>
+    </div>
+  </div>
+
+  <header class="nav">
+    <a class="nav-mark" href="index.html">SH</a>
+    <nav>
+      <a href="index.html#about">about</a>
+      <a href="index.html#work">work</a>
+      <a href="design.html">design</a>
+      <a class="current" href="notes.html">notes</a>
+    </nav>
+  </header>
+
+  <section class="hero hero-short">
+    <div class="hero-inner">
+      <h1>NOTES</h1>
+      <p class="hero-tag">something i read, broke, or figured out</p>
+    </div>
+  </section>
+
+  <section class="band band-lav">
+    <div class="inner">
+      <div class="grid" id="heatmap" role="img" aria-label="Calendar of daily notes"></div>
+      <p class="grid-caption" id="streak-count"></p>
+
+      <ol class="notes" id="timeline"></ol>
+      <button class="btn btn-small" id="show-more" type="button" hidden>SHOW ALL NOTES</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="inner footer-inner">
+      <span class="foot-mark">SARAH HANAFY</span>
+      <span class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="https://github.com/sarahhanafy/sarahhanafy.github.io">Source</a>
+      </span>
+    </div>
+  </footer>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+
+  <script src="script.js?v=12"></script>
+</body>
+</html>

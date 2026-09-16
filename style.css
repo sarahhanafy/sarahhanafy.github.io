@@ -86,7 +86,7 @@ body {
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 
-.nav-mark:hover { border-color: var(--white); background: rgba(255, 255, 255, 0.12); }
+.nav-mark:hover { border-color: var(--white); }
 
 .nav nav { display: flex; gap: 0.35rem; }
 
@@ -105,7 +105,9 @@ body {
 .nav nav a:hover,
 .nav nav a:focus-visible {
   color: var(--white);
-  background: rgba(255, 255, 255, 0.15);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
   outline: none;
 }
 
@@ -438,7 +440,9 @@ footer a:hover { color: var(--white); text-decoration: underline; text-underline
 
 .nav nav a.current {
   color: var(--gold);
-  background: rgba(255, 255, 255, 0.1);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 .gallery { display: block; }

@@ -65,6 +65,7 @@
     .then(function (r) { return r.json(); })
     .then(function (entries) {
       entries.sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+      showStreak(entries);
       buildGrid(entries);
       buildNotes(entries);
     })
@@ -72,6 +73,40 @@
       var list = document.getElementById("timeline");
       if (list) list.innerHTML = "<li class='muted'>Notes are unavailable right now.</li>";
     });
+
+  function currentStreak(entries) {
+    var byDate = {};
+    entries.forEach(function (e) { byDate[e.date] = e; });
+
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Count back from today; if today's note hasn't been generated yet,
+    // the streak still runs through yesterday rather than reading as zero.
+    var streak = 0;
+    var cursor = byDate[keyOf(today)] ? new Date(today.getTime()) : addDays(today, -1);
+    while (byDate[keyOf(cursor)]) {
+      streak++;
+      cursor = addDays(cursor, -1);
+    }
+    return streak;
+  }
+
+  // Runs on every page -- the home page shows the streak in a stat band
+  // even though the grid and the notes themselves live on notes.html.
+  function showStreak(entries) {
+    var streak = currentStreak(entries);
+
+    var statNum = document.getElementById("streak-num");
+    if (statNum) statNum.textContent = streak > 0 ? streak : entries.length;
+
+    var caption = document.getElementById("streak-count");
+    if (caption) {
+      caption.textContent = streak > 1
+        ? streak + " days in a row \u2014 " + entries.length + " notes total"
+        : entries.length + " notes so far";
+    }
+  }
 
   function buildGrid(entries) {
     var grid = document.getElementById("heatmap");
@@ -115,25 +150,6 @@
     }
 
     grid.appendChild(frag);
-
-    // Count back from today; if today's note hasn't been generated yet,
-    // the streak still runs through yesterday rather than reading as zero.
-    var streak = 0;
-    var cursor = byDate[keyOf(today)] ? new Date(today.getTime()) : addDays(today, -1);
-    while (byDate[keyOf(cursor)]) {
-      streak++;
-      cursor = addDays(cursor, -1);
-    }
-
-    var caption = document.getElementById("streak-count");
-    if (caption) {
-      caption.textContent = streak > 1
-        ? streak + " days in a row \u2014 " + entries.length + " notes total"
-        : entries.length + " notes so far";
-    }
-
-    var statNum = document.getElementById("streak-num");
-    if (statNum) statNum.textContent = streak > 0 ? streak : entries.length;
 
     function handleEnter(e) {
       var cell = e.target.closest(".cell.filled");
