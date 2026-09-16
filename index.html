@@ -4,113 +4,169 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sarah Hanafy</title>
-  <meta name="description" content="Sarah Hanafy — computer science student at the University of Washington." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23faf9f7'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='38' fill='%231a1a18' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <meta name="description" content="Sarah Hanafy — computer science at the University of Washington." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%234b2e83'/%3E%3Ctext x='32' y='45' font-family='Helvetica,Arial,sans-serif' font-size='34' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3ESH%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Sarah Hanafy</h1>
-      <p class="lede">
-        Computer science student at the University of Washington, based in Seattle.
+
+  <!-- ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>computer science @ university of washington &nbsp;✦&nbsp; seattle, washington &nbsp;✦&nbsp; building things and writing about them &nbsp;✦&nbsp;</span>
+      <span>computer science @ university of washington &nbsp;✦&nbsp; seattle, washington &nbsp;✦&nbsp; building things and writing about them &nbsp;✦&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- nav -->
+  <header class="nav">
+    <a class="nav-mark" href="#top">SH</a>
+    <nav>
+      <a href="#about">about</a>
+      <a href="#work">work</a>
+      <a href="#notes">notes</a>
+    </nav>
+  </header>
+
+  <!-- hero -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <h1>SARAH<br />HANAFY</h1>
+      <p class="hero-tag">building tomorrow, one commit at a time</p>
+      <p class="hero-sub">
+        Computer science at the University of Washington.<br />
+        Software engineering, data, and the occasional website.
       </p>
-    </header>
-
-    <section>
-      <p>
-        I study computer science at the Paul G. Allen School, where I'm also
-        minoring in applied mathematics and business administration. I expect
-        to graduate in 2028.
-      </p>
-      <p>
-        I spent the summer of 2026 on the GTM platform team at Atlassian as a
-        software engineering intern, and before that worked on data engineering
-        and AI at GoDaddy. Alongside school I do research at UW, build websites
-        for TEDxUW and CAIR-WA, and help run the Allen School's ambassador
-        program.
-      </p>
-      <!-- A sentence or two here about what you actually care about would make
-           this page yours -- what you like building, what you're curious about. -->
-    </section>
-
-    <section>
-      <h2>Experience</h2>
-      <!-- Add dates in the <span class="meta"> lines as you like. -->
-      <ul class="listing">
-        <li>
-          <span class="role">Software Engineering Intern</span>
-          <span class="org">Atlassian &middot; GTM platform</span>
-          <span class="meta">Summer 2026</span>
-        </li>
-        <li>
-          <span class="role">Data Engineering &amp; AI Intern</span>
-          <span class="org">GoDaddy</span>
-          <span class="meta"></span>
-        </li>
-        <li>
-          <span class="role">Research Assistant</span>
-          <span class="org">University of Washington</span>
-          <span class="meta"></span>
-        </li>
-        <li>
-          <span class="role">Web Developer</span>
-          <span class="org">TEDxUW</span>
-          <span class="meta"></span>
-        </li>
-        <li>
-          <span class="role">Front-End Developer</span>
-          <span class="org">CAIR-WA</span>
-          <span class="meta"></span>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Around campus</h2>
-      <ul class="listing">
-        <li>
-          <span class="role">Vice Chair</span>
-          <span class="org">Muslims in Computer Science &amp; Engineering</span>
-          <span class="meta"></span>
-        </li>
-        <li>
-          <span class="role">Ambassador</span>
-          <span class="org">Paul G. Allen School</span>
-          <span class="meta"></span>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Notes</h2>
-      <p class="section-note">
-        A short note most days about something I read, broke, or figured out.
-      </p>
-
-      <div class="grid-wrap">
-        <div class="grid" id="heatmap" role="img" aria-label="Calendar of daily notes"></div>
-        <p class="grid-caption muted" id="streak-count"></p>
+      <div class="buttons">
+        <a class="btn btn-solid" href="https://github.com/sarahhanafy" target="_blank" rel="noopener">GITHUB</a>
+        <!-- fill these in and delete the comment markers to show them
+        <a class="btn" href="https://linkedin.com/in/...">LINKEDIN</a>
+        <a class="btn" href="mailto:you@example.com">EMAIL</a>
+        -->
+        <a class="btn" href="#notes">READ MY NOTES</a>
       </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="band band-white" id="about">
+    <div class="inner">
+      <h2>About</h2>
+      <div class="prose">
+        <p>
+          I study computer science at the Paul G. Allen School, minoring in
+          applied mathematics and business administration, and I graduate in
+          2028.
+        </p>
+        <p>
+          I spent the summer of 2026 on the GTM platform team at Atlassian as a
+          software engineering intern, and before that worked on data
+          engineering and AI at GoDaddy. During the school year I do research at
+          UW, build websites for TEDxUW and CAIR-WA, and help run the Allen
+          School's ambassador program.
+        </p>
+        <!-- Write a sentence here about what you actually like building.
+             It's the one part of this page nobody else could have written. -->
+      </div>
+    </div>
+  </section>
+
+  <!-- stats -->
+  <section class="stats">
+    <div class="stat stat-purple">
+      <span class="stat-num">2028</span>
+      <span class="stat-label">EXPECTED GRADUATION</span>
+    </div>
+    <div class="stat stat-gold">
+      <span class="stat-num">2</span>
+      <span class="stat-label">SOFTWARE INTERNSHIPS</span>
+    </div>
+    <div class="stat stat-lav">
+      <span class="stat-num">4</span>
+      <span class="stat-label">TEAMS &amp; STUDENT ORGS</span>
+    </div>
+    <div class="stat stat-ink">
+      <span class="stat-num" id="streak-num">&mdash;</span>
+      <span class="stat-label">DAYS OF NOTES IN A ROW</span>
+    </div>
+  </section>
+
+  <!-- work -->
+  <section class="band band-white" id="work">
+    <div class="inner">
+      <h2>Work</h2>
+      <!-- Add dates in the <span class="row-meta"> slots whenever you like. -->
+      <ul class="rows">
+        <li>
+          <span class="row-role">Software Engineering Intern</span>
+          <span class="row-org">Atlassian &mdash; GTM platform</span>
+          <span class="row-meta">SUMMER 2026</span>
+        </li>
+        <li>
+          <span class="row-role">Data Engineering &amp; AI Intern</span>
+          <span class="row-org">GoDaddy</span>
+          <span class="row-meta"></span>
+        </li>
+        <li>
+          <span class="row-role">Research Assistant</span>
+          <span class="row-org">University of Washington</span>
+          <span class="row-meta"></span>
+        </li>
+        <li>
+          <span class="row-role">Web Developer</span>
+          <span class="row-org">TEDxUW</span>
+          <span class="row-meta"></span>
+        </li>
+        <li>
+          <span class="row-role">Front-End Developer</span>
+          <span class="row-org">CAIR-WA</span>
+          <span class="row-meta"></span>
+        </li>
+        <li>
+          <span class="row-role">Vice Chair</span>
+          <span class="row-org">Muslims in Computer Science &amp; Engineering</span>
+          <span class="row-meta"></span>
+        </li>
+        <li>
+          <span class="row-role">Ambassador</span>
+          <span class="row-org">Paul G. Allen School</span>
+          <span class="row-meta"></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- notes -->
+  <section class="band band-lav" id="notes">
+    <div class="inner">
+      <h2>Notes</h2>
+      <p class="lead">
+        A short note most days &mdash; something I read, broke, or figured out.
+      </p>
+
+      <div class="grid" id="heatmap" role="img" aria-label="Calendar of daily notes"></div>
+      <p class="grid-caption" id="streak-count"></p>
 
       <ol class="notes" id="timeline"></ol>
-      <button class="text-button" id="show-more" type="button" hidden>Show all notes</button>
-    </section>
+      <button class="btn btn-small" id="show-more" type="button" hidden>SHOW ALL NOTES</button>
+    </div>
+  </section>
 
-    <footer>
-      <p>
-        <a href="https://github.com/sarahhanafy">GitHub</a>
-        <!-- <a href="https://linkedin.com/in/...">LinkedIn</a> -->
-        <!-- <a href="mailto:you@example.com">Email</a> -->
-      </p>
-    </footer>
-  </main>
+  <footer>
+    <div class="inner footer-inner">
+      <span class="foot-mark">SARAH HANAFY</span>
+      <span class="foot-links">
+        <a href="https://github.com/sarahhanafy" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/sarahhanafy/sarahhanafy.github.io">Source</a>
+      </span>
+    </div>
+  </footer>
 
   <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

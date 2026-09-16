@@ -116,8 +116,10 @@
 
     grid.appendChild(frag);
 
+    // Count back from today; if today's note hasn't been generated yet,
+    // the streak still runs through yesterday rather than reading as zero.
     var streak = 0;
-    var cursor = new Date(today.getTime());
+    var cursor = byDate[keyOf(today)] ? new Date(today.getTime()) : addDays(today, -1);
     while (byDate[keyOf(cursor)]) {
       streak++;
       cursor = addDays(cursor, -1);
@@ -126,9 +128,12 @@
     var caption = document.getElementById("streak-count");
     if (caption) {
       caption.textContent = streak > 1
-        ? streak + " days in a row."
-        : entries.length + " notes so far.";
+        ? streak + " days in a row \u2014 " + entries.length + " notes total"
+        : entries.length + " notes so far";
     }
+
+    var statNum = document.getElementById("streak-num");
+    if (statNum) statNum.textContent = streak > 0 ? streak : entries.length;
 
     function handleEnter(e) {
       var cell = e.target.closest(".cell.filled");
@@ -179,9 +184,43 @@
       button.hidden = false;
       button.addEventListener("click", function () {
         expanded = !expanded;
-        button.textContent = expanded ? "Show fewer notes" : "Show all notes";
+        button.textContent = expanded ? "SHOW FEWER NOTES" : "SHOW ALL NOTES";
         render();
       });
     }
+  }
+  /* ---------- scroll reveal ---------- */
+
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var targets = [].slice.call(document.querySelectorAll(".band .inner, .stat"));
+
+  targets.forEach(function (el) { el.classList.add("reveal"); });
+
+  function revealPass() {
+    var limit = window.innerHeight - 60;
+    targets = targets.filter(function (el) {
+      if (el.getBoundingClientRect().top < limit) {
+        el.classList.add("in");
+        return false;
+      }
+      return true;
+    });
+    if (!targets.length) window.removeEventListener("scroll", onScroll);
+  }
+
+  var queued = false;
+  function onScroll() {
+    if (!queued) { queued = true; requestAnimationFrame(function () { queued = false; revealPass(); }); }
+  }
+
+  if (reduced) {
+    targets.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    revealPass();
+    setTimeout(revealPass, 400);
+    // Never let a missed frame leave a section invisible.
+    setTimeout(function () { targets.forEach(function (el) { el.classList.add("in"); }); }, 3000);
   }
 })();
