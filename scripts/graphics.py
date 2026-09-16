@@ -30,6 +30,7 @@ ACRONYMS = {
     "ui": "UI", "ux": "UX", "nyc": "NYC", "usa": "USA", "wa": "WA",
     "dubhacks": "DubHacks", "pnw": "PNW", "maps": "MAPS", "mcrc": "MCRC",
     "laserx": "LaserX", "msa": "MSA", "asa": "ASA", "tedxuofw": "TEDxUofW",
+    "wamy4p": "WAMY4P", "uw": "UW", "psl": "PSL",
 }
 
 # Words that stay lowercase in a title unless they lead it.
