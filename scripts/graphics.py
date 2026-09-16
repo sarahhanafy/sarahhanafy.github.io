@@ -19,6 +19,7 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GRAPHICS_DIR = os.path.join(ROOT, "graphics")
 GRAPHICS_JSON = os.path.join(ROOT, "data", "graphics.json")
+SECTIONS_JSON = os.path.join(ROOT, "data", "sections.json")
 
 EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg", ".avif"}
 
@@ -27,8 +28,13 @@ ACRONYMS = {
     "uw": "UW", "tedx": "TEDx", "tedxuw": "TEDxUW", "cair": "CAIR",
     "cairwa": "CAIR-WA", "misce": "MISCE", "cs": "CS", "ai": "AI",
     "ui": "UI", "ux": "UX", "nyc": "NYC", "usa": "USA", "wa": "WA",
-    "dubhacks": "DubHacks", "pnw": "PNW",
+    "dubhacks": "DubHacks", "pnw": "PNW", "maps": "MAPS", "mcrc": "MCRC",
+    "laserx": "LaserX", "msa": "MSA", "asa": "ASA", "tedxuofw": "TEDxUofW",
 }
+
+# Words that stay lowercase in a title unless they lead it.
+SMALL_WORDS = {"and", "or", "of", "the", "a", "an", "at", "in", "on", "for",
+               "to", "with", "from", "by"}
 
 
 def prettify(text):
@@ -37,7 +43,16 @@ def prettify(text):
     # Drop a leading sort prefix like "01 " so files can be ordered by name.
     if parts and parts[0].isdigit() and len(parts) > 1:
         parts = parts[1:]
-    return " ".join(ACRONYMS.get(w.lower(), w.capitalize()) for w in parts)
+    words = []
+    for i, word in enumerate(parts):
+        key = word.lower()
+        if key in ACRONYMS:
+            words.append(ACRONYMS[key])
+        elif i > 0 and key in SMALL_WORDS:
+            words.append(key)
+        else:
+            words.append(word.capitalize())
+    return " ".join(words)
 
 
 def title_from_filename(name):
@@ -58,7 +73,7 @@ def collect():
                 if name.startswith("."):
                     continue
                 if os.path.splitext(name)[1].lower() in EXTENSIONS:
-                    found.append((entry + "/" + name, prettify(entry)))
+                    found.append((entry + "/" + name, entry))
         elif os.path.splitext(entry)[1].lower() in EXTENSIONS:
             found.append((entry, ""))
 
@@ -67,11 +82,42 @@ def collect():
     return found
 
 
+def load_sections():
+    """Folder -> {title, dates}. New folders are scaffolded with a blank
+    date range for you to fill in; anything you've typed is kept."""
+    meta = {}
+    if os.path.exists(SECTIONS_JSON):
+        try:
+            with open(SECTIONS_JSON) as f:
+                loaded = json.load(f)
+            if isinstance(loaded, dict):
+                meta = loaded
+        except (ValueError, OSError):
+            meta = {}
+    return meta
+
+
+def save_sections(meta):
+    with open(SECTIONS_JSON, "w") as f:
+        json.dump(meta, f, indent=2, sort_keys=True)
+        f.write("\n")
+
+
 def main():
     os.makedirs(GRAPHICS_DIR, exist_ok=True)
     os.makedirs(os.path.dirname(GRAPHICS_JSON), exist_ok=True)
 
     found = collect()
+
+    meta = load_sections()
+    for _, folder in found:
+        if folder and folder not in meta:
+            meta[folder] = {"title": prettify(folder), "dates": ""}
+    for folder in list(meta):
+        if folder not in {f for _, f in found}:
+            del meta[folder]
+    save_sections(meta)
+
     sections = {path: section for path, section in found}
     present = set(sections)
 
@@ -87,20 +133,26 @@ def main():
 
     entries = []
     # Keep the hand-edited order, dropping anything that's been deleted.
+    def decorate(entry):
+        folder = sections[entry["file"]]
+        entry["section"] = folder
+        info = meta.get(folder, {})
+        entry["section_title"] = info.get("title") or prettify(folder)
+        entry["section_dates"] = info.get("dates", "")
+        return entry
+
     for entry in existing:
         if isinstance(entry, dict) and entry.get("file") in present:
-            entry["section"] = sections[entry["file"]]
-            entries.append(entry)
+            entries.append(decorate(entry))
 
     known = {e["file"] for e in entries}
     for path, section in found:
         if path not in known:
-            entries.append({
+            entries.append(decorate({
                 "file": path,
                 "title": title_from_filename(path),
                 "note": "",
-                "section": section,
-            })
+            }))
 
     with open(GRAPHICS_JSON, "w") as f:
         json.dump(entries, f, indent=2)

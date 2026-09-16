@@ -438,6 +438,22 @@ footer a:hover { color: var(--white); text-decoration: underline; text-underline
   margin-bottom: 1.25rem;
 }
 
+.shelf-title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.shelf-dates {
+  font-family: "Space Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple);
+  white-space: nowrap;
+}
+
 .shelf-head h2 {
   font-family: "Archivo Black", Impact, sans-serif;
   font-size: clamp(1.3rem, 3.5vw, 1.8rem);
@@ -512,8 +528,9 @@ footer a:hover { color: var(--white); text-decoration: underline; text-underline
 .tile img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  /* contain, not cover -- a design portfolio shouldn't crop the artwork */
+  object-fit: contain;
   background: var(--lav);
 }
 

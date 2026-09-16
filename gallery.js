@@ -35,16 +35,25 @@
     var order = [];
     var groups = {};
 
+    var labels = {};
+
     items.forEach(function (item) {
       var key = item.section || "";
-      if (!(key in groups)) { groups[key] = []; order.push(key); }
+      if (!(key in groups)) {
+        groups[key] = [];
+        order.push(key);
+        labels[key] = {
+          title: item.section_title || item.section || "More",
+          dates: item.section_dates || "",
+        };
+      }
       groups[key].push(item);
     });
 
     var frag = document.createDocumentFragment();
 
     order.forEach(function (key) {
-      frag.appendChild(buildSection(key, groups[key]));
+      frag.appendChild(buildSection(labels[key], groups[key]));
     });
 
     gallery.appendChild(frag);
@@ -57,9 +66,21 @@
     var head = document.createElement("div");
     head.className = "shelf-head";
 
+    var titleWrap = document.createElement("div");
+    titleWrap.className = "shelf-title";
+
     var heading = document.createElement("h2");
-    heading.textContent = label || "More";
-    head.appendChild(heading);
+    heading.textContent = label.title;
+    titleWrap.appendChild(heading);
+
+    if (label.dates) {
+      var dates = document.createElement("span");
+      dates.className = "shelf-dates";
+      dates.textContent = label.dates;
+      titleWrap.appendChild(dates);
+    }
+
+    head.appendChild(titleWrap);
 
     var controls = document.createElement("div");
     controls.className = "shelf-controls";
@@ -167,7 +188,7 @@
 
     var name = item.title || item.file;
     var bits = [];
-    if (item.section) bits.push(item.section);
+    if (item.section_title) bits.push(item.section_title);
     bits.push(name);
     if (item.note) bits.push(item.note);
     boxCaption.textContent = bits.join(" — ");
