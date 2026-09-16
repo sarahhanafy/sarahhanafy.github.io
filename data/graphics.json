@@ -1,6 +1,118 @@
 [
   {
-    "file": "04-cair-wa/01-recognize-eid-as-a-holiday.jpg",
+    "file": "05-muslims-in-cse/01-msa-web-dev-collab.jpg",
+    "title": "MSA Web Dev Collab",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/02-fuel-for-finals.jpg",
+    "title": "Fuel for Finals",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/03-eid-ice-cream-sundae-social.jpg",
+    "title": "Eid Ice Cream Sundae Social",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/04-careers-in-tech-panel.jpg",
+    "title": "Careers in Tech Panel",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/05-red-bull-social.jpg",
+    "title": "Red Bull Social",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/06-spring-events.jpg",
+    "title": "Spring Events",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/07-ramadan-iftar.jpg",
+    "title": "Ramadan Iftar",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/08-ramadan-meditation-space.jpg",
+    "title": "Ramadan Meditation Space",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/09-chai-social.jpg",
+    "title": "Chai Social",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/10-pizza-social.jpg",
+    "title": "Pizza Social",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/11-winter-events.jpg",
+    "title": "Winter Events",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/12-ice-cream-social.jpg",
+    "title": "Ice Cream Social",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "05-muslims-in-cse/13-community-iftar.jpg",
+    "title": "Community Iftar",
+    "note": "",
+    "section": "05-muslims-in-cse",
+    "section_title": "Muslims in CSE",
+    "section_dates": "Spring 2025 \u2013 Present"
+  },
+  {
+    "file": "04-cair-wa/01-summer-internship.jpg",
+    "title": "Summer Internship",
+    "note": "",
+    "section": "04-cair-wa",
+    "section_title": "CAIR-WA",
+    "section_dates": "Winter 2025"
+  },
+  {
+    "file": "04-cair-wa/02-recognize-eid-as-a-holiday.jpg",
     "title": "Recognize Eid as a Holiday",
     "note": "",
     "section": "04-cair-wa",
@@ -8,16 +120,8 @@
     "section_dates": "Winter 2025"
   },
   {
-    "file": "04-cair-wa/02-flying-while-muslim.jpg",
+    "file": "04-cair-wa/03-flying-while-muslim.jpg",
     "title": "Flying While Muslim",
-    "note": "",
-    "section": "04-cair-wa",
-    "section_title": "CAIR-WA",
-    "section_dates": "Winter 2025"
-  },
-  {
-    "file": "04-cair-wa/03-summer-internship.jpg",
-    "title": "Summer Internship",
     "note": "",
     "section": "04-cair-wa",
     "section_title": "CAIR-WA",

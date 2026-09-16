@@ -12,9 +12,9 @@ folder run in filename order, top of the section to the end of the row.
 Anything left loose in graphics/ shows up in its own section at the bottom.
 
 Titles are guessed from filenames: "tedxuw-poster.png" becomes "TEDxUW
-Poster". Titles, captions and the order of entries that you've edited in
-data/graphics.json are preserved, so you can rearrange the file by hand
-and new images are appended.
+Poster". Order always comes from the folders and filenames, never from
+data/graphics.json -- renaming a file is how you move it. Titles and
+captions you've edited in that file ARE kept.
 """
 import json
 import os
@@ -33,7 +33,7 @@ ACRONYMS = {
     "ui": "UI", "ux": "UX", "nyc": "NYC", "usa": "USA", "wa": "WA",
     "dubhacks": "DubHacks", "pnw": "PNW", "maps": "MAPS", "mcrc": "MCRC",
     "laserx": "LaserX", "msa": "MSA", "asa": "ASA", "tedxuofw": "TEDxUofW",
-    "wamy4p": "WAMY4P", "uw": "UW", "psl": "PSL",
+    "wamy4p": "WAMY4P", "uw": "UW", "psl": "PSL", "cse": "CSE", "micse": "MiCSE",
 }
 
 # Words that stay lowercase in a title unless they lead it.
@@ -137,8 +137,6 @@ def main():
         except (ValueError, OSError):
             existing = []
 
-    entries = []
-    # Keep the hand-edited order, dropping anything that's been deleted.
     def decorate(entry):
         folder = sections[entry["file"]]
         entry["section"] = folder
@@ -147,18 +145,19 @@ def main():
         entry["section_dates"] = info.get("dates", "")
         return entry
 
-    for entry in existing:
-        if isinstance(entry, dict) and entry.get("file") in present:
-            entries.append(decorate(entry))
+    # Order always follows the scan -- newest folder first, filenames in
+    # order within it. Renaming a file is how you move it. Titles and notes
+    # edited by hand in graphics.json are carried across.
+    previous = {e.get("file"): e for e in existing if isinstance(e, dict)}
 
-    known = {e["file"] for e in entries}
+    entries = []
     for path, section in found:
-        if path not in known:
-            entries.append(decorate({
-                "file": path,
-                "title": title_from_filename(path),
-                "note": "",
-            }))
+        old_entry = previous.get(path, {})
+        entries.append(decorate({
+            "file": path,
+            "title": old_entry.get("title") or title_from_filename(path),
+            "note": old_entry.get("note", ""),
+        }))
 
     with open(GRAPHICS_JSON, "w") as f:
         json.dump(entries, f, indent=2)
