@@ -53,6 +53,12 @@ jobs:
           git add data/today.json data/entries.json data/graphics.json data/sections.json JOURNAL.md
           if ! git diff --cached --quiet; then
             git commit -m "Daily update: $(date -u +%Y-%m-%d)"
+            # The jitter sleep above can run for up to 90 minutes, so main
+            # may have moved since checkout (a manual push, or another run).
+            # Rebase onto the latest tip right before pushing instead of
+            # failing outright on a non-fast-forward rejection.
+            git fetch origin main
+            git rebase origin/main
             git push
           else
             echo "No changes to commit."
