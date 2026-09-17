@@ -58,3 +58,7 @@ Learned about idempotency keys in payment APIs -- such a clean idea.
 
 Started sketching out a side project. No promises on when it ships.
 
+## 2026-09-17 (day 15)
+
+Today I appreciated good error messages. Shoutout to whoever wrote that one.
+
