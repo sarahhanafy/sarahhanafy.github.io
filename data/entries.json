@@ -73,5 +73,10 @@
     "date": "2026-09-17",
     "day": 15,
     "entry": "Today I appreciated good error messages. Shoutout to whoever wrote that one."
+  },
+  {
+    "date": "2026-09-18",
+    "day": 16,
+    "entry": "Explored WebAssembly for the first time. Faster than I expected to get running."
   }
 ]

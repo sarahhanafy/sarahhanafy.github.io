@@ -62,3 +62,7 @@ Started sketching out a side project. No promises on when it ships.
 
 Today I appreciated good error messages. Shoutout to whoever wrote that one.
 
+## 2026-09-18 (day 16)
+
+Explored WebAssembly for the first time. Faster than I expected to get running.
+
