@@ -78,5 +78,10 @@
     "date": "2026-09-18",
     "day": 16,
     "entry": "Explored WebAssembly for the first time. Faster than I expected to get running."
+  },
+  {
+    "date": "2026-09-19",
+    "day": 17,
+    "entry": "Reminder to self: read the docs before Stack Overflow. Sometimes it's faster."
   }
 ]

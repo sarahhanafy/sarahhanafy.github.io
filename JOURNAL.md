@@ -66,3 +66,7 @@ Today I appreciated good error messages. Shoutout to whoever wrote that one.
 
 Explored WebAssembly for the first time. Faster than I expected to get running.
 
+## 2026-09-19 (day 17)
+
+Reminder to self: read the docs before Stack Overflow. Sometimes it's faster.
+
