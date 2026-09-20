@@ -70,3 +70,7 @@ Explored WebAssembly for the first time. Faster than I expected to get running.
 
 Reminder to self: read the docs before Stack Overflow. Sometimes it's faster.
 
+## 2026-09-20 (day 18)
+
+Cleaned up a messy CSS file. Flexbox saves the day again.
+
