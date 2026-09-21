@@ -88,5 +88,10 @@
     "date": "2026-09-20",
     "day": 18,
     "entry": "Cleaned up a messy CSS file. Flexbox saves the day again."
+  },
+  {
+    "date": "2026-09-21",
+    "day": 19,
+    "entry": "Learned what a bloom filter is and now I want to use one everywhere."
   }
 ]
