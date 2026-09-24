@@ -86,3 +86,7 @@ Paired with a teammate on a tricky race condition. Two heads really did help.
 
 Today's rabbit hole: how CDNs decide which edge node serves you.
 
+## 2026-09-24 (day 22)
+
+Wrote a small CLI tool to automate something I do weekly. Worth it.
+
