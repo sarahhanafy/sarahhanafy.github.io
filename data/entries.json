@@ -108,5 +108,10 @@
     "date": "2026-09-24",
     "day": 22,
     "entry": "Wrote a small CLI tool to automate something I do weekly. Worth it."
+  },
+  {
+    "date": "2026-09-25",
+    "day": 23,
+    "entry": "Revisited Big-O notation while reviewing a PR. Still useful after all these years."
   }
 ]

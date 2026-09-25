@@ -90,3 +90,7 @@ Today's rabbit hole: how CDNs decide which edge node serves you.
 
 Wrote a small CLI tool to automate something I do weekly. Worth it.
 
+## 2026-09-25 (day 23)
+
+Revisited Big-O notation while reviewing a PR. Still useful after all these years.
+
