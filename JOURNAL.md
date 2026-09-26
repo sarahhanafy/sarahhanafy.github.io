@@ -94,3 +94,7 @@ Wrote a small CLI tool to automate something I do weekly. Worth it.
 
 Revisited Big-O notation while reviewing a PR. Still useful after all these years.
 
+## 2026-09-26 (day 24)
+
+Learned that `EXPLAIN ANALYZE` is a database's way of showing its work.
+

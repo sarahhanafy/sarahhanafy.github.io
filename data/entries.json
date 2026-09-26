@@ -113,5 +113,10 @@
     "date": "2026-09-25",
     "day": 23,
     "entry": "Revisited Big-O notation while reviewing a PR. Still useful after all these years."
+  },
+  {
+    "date": "2026-09-26",
+    "day": 24,
+    "entry": "Learned that `EXPLAIN ANALYZE` is a database's way of showing its work."
   }
 ]
