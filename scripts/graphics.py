@@ -7,10 +7,10 @@ graphics/01-maps-youth/, graphics/02-wamy4p/ -- and drop images inside.
 
 Number the folders OLDEST FIRST. The page shows them newest first, so the
 highest-numbered folder sits at the top: a new section just needs the next
-number and it lands at the top on its own, no renumbering. Number images
-within a folder the same way -- oldest first -- and the newest (highest
-number) is shown first, at the start of the row: add a new photo with the
-next number and it lands at the front on its own, no renumbering.
+number and it lands at the top on its own, no renumbering. Images inside a
+folder run in filename order, top of the section to the end of the row --
+to put a new photo at the FRONT of the row, number it lower than everything
+else already there (a "00-" prefix works and never collides).
 Anything left loose in graphics/ shows up in its own section at the bottom.
 
 Titles are guessed from filenames: "tedxuw-poster.png" becomes "TEDxUW
@@ -127,10 +127,9 @@ def collect():
         elif os.path.splitext(entry)[1].lower() in EXTENSIONS:
             found.append((entry, ""))
 
-    # Filenames descending within a folder (newest/highest-numbered image
-    # first), then newest folder first. Two stable passes: the second only
-    # reorders sections.
-    found.sort(key=lambda item: item[0], reverse=True)
+    # Filenames ascending within a folder, then newest folder first.
+    # Two stable passes: the second only reorders sections.
+    found.sort(key=lambda item: item[0])
     found.sort(key=lambda item: item[1], reverse=True)
     return found
 
