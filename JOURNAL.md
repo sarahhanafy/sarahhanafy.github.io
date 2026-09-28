@@ -102,3 +102,7 @@ Learned that `EXPLAIN ANALYZE` is a database's way of showing its work.
 
 Tried timeboxing my debugging sessions. Helped me step back and think clearer.
 
+## 2026-09-28 (day 26)
+
+Read about the CAP theorem again -- it never stops being relevant.
+
