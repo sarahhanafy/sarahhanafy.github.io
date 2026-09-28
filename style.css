@@ -1,16 +1,19 @@
 /* Sarah Hanafy — personal site */
 
 :root {
-  --purple: #4b2e83;      /* UW purple */
-  --purple-dk: #38215f;
-  --gold: #e3c96a;
-  --gold-dk: #b7a57a;
-  --lav: #ece7f6;
-  --ink: #16121f;
+  /* "Into the Wild" palette -- slate blue-gray, olive, sand, and rust.
+     Variable names kept from the old UW purple/gold theme so the rest of
+     this file (and the JS) didn't need to change, just the values. */
+  --purple: #935e4c;      /* rust, darkened slightly from #a76b56 for AA contrast on white text */
+  --purple-dk: #6a4436;
+  --gold: #edbc81;        /* sand */
+  --gold-dk: #ab875d;
+  --lav: #f2f4f5;         /* pale tint of the slate blue-gray, #808c97 */
+  --ink: #131311;         /* near-black, shaded from the olive, #7e8071 */
   --white: #ffffff;
-  --body: #2a2436;
-  --muted: #6d6480;
-  --line: #e0dae9;
+  --body: #30312b;        /* dark warm gray-olive body text */
+  --muted: #5b5c51;       /* muted olive-gray for secondary text */
+  --line: #fcf3e8;        /* pale sand divider */
 }
 
 * { box-sizing: border-box; }
@@ -315,7 +318,7 @@ body {
   width: 13px;
   height: 13px;
   border-radius: 2px;
-  background: rgba(75, 46, 131, 0.13);
+  background: rgba(147, 94, 76, 0.13);
 }
 
 .cell.filled { background: var(--purple); }
@@ -336,10 +339,10 @@ body {
 
 .notes li {
   padding: 1rem 0;
-  border-top: 2px solid rgba(75, 46, 131, 0.14);
+  border-top: 2px solid rgba(147, 94, 76, 0.14);
 }
 
-.notes li:last-child { border-bottom: 2px solid rgba(75, 46, 131, 0.14); }
+.notes li:last-child { border-bottom: 2px solid rgba(147, 94, 76, 0.14); }
 
 .note-date {
   display: block;
@@ -522,7 +525,7 @@ footer a:hover { color: var(--white); text-decoration: underline; text-underline
 
 .rail::-webkit-scrollbar { height: 8px; }
 .rail::-webkit-scrollbar-track { background: transparent; }
-.rail::-webkit-scrollbar-thumb { background: rgba(75,46,131,0.35); border-radius: 4px; }
+.rail::-webkit-scrollbar-thumb { background: rgba(147,94,76,0.35); border-radius: 4px; }
 .rail:hover::-webkit-scrollbar-thumb { background: var(--purple); }
 
 /* Fixed height, width from the artwork's own ratio -- square posts come
@@ -582,7 +585,7 @@ footer a:hover { color: var(--white); text-decoration: underline; text-underline
   position: fixed;
   inset: 0;
   z-index: 60;
-  background: rgba(22, 18, 31, 0.94);
+  background: rgba(19, 19, 17, 0.94);
   display: flex;
   align-items: center;
   justify-content: center;
