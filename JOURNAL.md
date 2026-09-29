@@ -106,3 +106,7 @@ Tried timeboxing my debugging sessions. Helped me step back and think clearer.
 
 Read about the CAP theorem again -- it never stops being relevant.
 
+## 2026-09-29 (day 27)
+
+Today I let a linter yell at me until my code was actually clean.
+
