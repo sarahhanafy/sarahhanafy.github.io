@@ -138,5 +138,10 @@
     "date": "2026-09-30",
     "day": 28,
     "entry": "Discovered a neat regex trick for parsing log files."
+  },
+  {
+    "date": "2026-10-01",
+    "day": 29,
+    "entry": "Spent some time on accessibility -- alt text matters more than people think."
   }
 ]
