@@ -143,5 +143,10 @@
     "date": "2026-10-01",
     "day": 29,
     "entry": "Spent some time on accessibility -- alt text matters more than people think."
+  },
+  {
+    "date": "2026-10-02",
+    "day": 30,
+    "entry": "Learned the real difference between authentication and authorization today."
   }
 ]

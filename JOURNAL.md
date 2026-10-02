@@ -118,3 +118,7 @@ Discovered a neat regex trick for parsing log files.
 
 Spent some time on accessibility -- alt text matters more than people think.
 
+## 2026-10-02 (day 30)
+
+Learned the real difference between authentication and authorization today.
+
