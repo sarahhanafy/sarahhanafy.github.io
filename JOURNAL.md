@@ -122,3 +122,7 @@ Spent some time on accessibility -- alt text matters more than people think.
 
 Learned the real difference between authentication and authorization today.
 
+## 2026-10-03 (day 31)
+
+Today's small joy: a green CI pipeline on the first try.
+
