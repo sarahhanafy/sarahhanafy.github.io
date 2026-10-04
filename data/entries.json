@@ -153,5 +153,10 @@
     "date": "2026-10-03",
     "day": 31,
     "entry": "Today's small joy: a green CI pipeline on the first try."
+  },
+  {
+    "date": "2026-10-04",
+    "day": 32,
+    "entry": "Read about event sourcing as an alternative to plain CRUD."
   }
 ]

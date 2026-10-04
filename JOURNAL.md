@@ -126,3 +126,7 @@ Learned the real difference between authentication and authorization today.
 
 Today's small joy: a green CI pipeline on the first try.
 
+## 2026-10-04 (day 32)
+
+Read about event sourcing as an alternative to plain CRUD.
+
