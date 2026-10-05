@@ -130,3 +130,7 @@ Today's small joy: a green CI pipeline on the first try.
 
 Read about event sourcing as an alternative to plain CRUD.
 
+## 2026-10-05 (day 33)
+
+Practiced explaining a technical concept in plain English. Harder than coding it.
+

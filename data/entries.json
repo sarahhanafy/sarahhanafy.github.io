@@ -158,5 +158,10 @@
     "date": "2026-10-04",
     "day": 32,
     "entry": "Read about event sourcing as an alternative to plain CRUD."
+  },
+  {
+    "date": "2026-10-05",
+    "day": 33,
+    "entry": "Practiced explaining a technical concept in plain English. Harder than coding it."
   }
 ]
