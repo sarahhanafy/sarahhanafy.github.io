@@ -134,3 +134,7 @@ Read about event sourcing as an alternative to plain CRUD.
 
 Practiced explaining a technical concept in plain English. Harder than coding it.
 
+## 2026-10-06 (day 34)
+
+Today I appreciated semantic versioning. Rules that actually save headaches.
+
