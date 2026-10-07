@@ -138,3 +138,7 @@ Practiced explaining a technical concept in plain English. Harder than coding it
 
 Today I appreciated semantic versioning. Rules that actually save headaches.
 
+## 2026-10-07 (day 35)
+
+Explored feature flags for shipping code safely. Small change, big confidence boost.
+

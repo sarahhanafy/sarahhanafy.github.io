@@ -168,5 +168,10 @@
     "date": "2026-10-06",
     "day": 34,
     "entry": "Today I appreciated semantic versioning. Rules that actually save headaches."
+  },
+  {
+    "date": "2026-10-07",
+    "day": 35,
+    "entry": "Explored feature flags for shipping code safely. Small change, big confidence boost."
   }
 ]
