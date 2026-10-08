@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-07",
-  "day_number": 35,
-  "entry": "Explored feature flags for shipping code safely. Small change, big confidence boost.",
-  "updated_at": "2026-10-07T20:21:42+00:00"
+  "date": "2026-10-08",
+  "day_number": 36,
+  "entry": "Learned how load balancers decide where to route traffic.",
+  "updated_at": "2026-10-08T19:35:13+00:00"
 }

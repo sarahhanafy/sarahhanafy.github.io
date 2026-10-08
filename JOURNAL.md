@@ -142,3 +142,7 @@ Today I appreciated semantic versioning. Rules that actually save headaches.
 
 Explored feature flags for shipping code safely. Small change, big confidence boost.
 
+## 2026-10-08 (day 36)
+
+Learned how load balancers decide where to route traffic.
+
