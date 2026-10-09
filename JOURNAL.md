@@ -146,3 +146,7 @@ Explored feature flags for shipping code safely. Small change, big confidence bo
 
 Learned how load balancers decide where to route traffic.
 
+## 2026-10-09 (day 37)
+
+Today's takeaway: a good README saves future-me so much time.
+

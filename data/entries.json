@@ -178,5 +178,10 @@
     "date": "2026-10-08",
     "day": 36,
     "entry": "Learned how load balancers decide where to route traffic."
+  },
+  {
+    "date": "2026-10-09",
+    "day": 37,
+    "entry": "Today's takeaway: a good README saves future-me so much time."
   }
 ]
