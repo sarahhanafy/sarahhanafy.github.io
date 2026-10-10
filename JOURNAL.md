@@ -150,3 +150,7 @@ Learned how load balancers decide where to route traffic.
 
 Today's takeaway: a good README saves future-me so much time.
 
+## 2026-10-10 (day 38)
+
+Tinkered with cron expressions until they finally did what I meant.
+
