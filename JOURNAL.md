@@ -154,3 +154,7 @@ Today's takeaway: a good README saves future-me so much time.
 
 Tinkered with cron expressions until they finally did what I meant.
 
+## 2026-10-11 (day 39)
+
+Read about the difference between horizontal and vertical scaling.
+

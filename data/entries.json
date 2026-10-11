@@ -188,5 +188,10 @@
     "date": "2026-10-10",
     "day": 38,
     "entry": "Tinkered with cron expressions until they finally did what I meant."
+  },
+  {
+    "date": "2026-10-11",
+    "day": 39,
+    "entry": "Read about the difference between horizontal and vertical scaling."
   }
 ]
