@@ -158,3 +158,7 @@ Tinkered with cron expressions until they finally did what I meant.
 
 Read about the difference between horizontal and vertical scaling.
 
+## 2026-10-12 (day 40)
+
+Today I fixed a bug that only happened in one specific timezone. Fun times.
+
