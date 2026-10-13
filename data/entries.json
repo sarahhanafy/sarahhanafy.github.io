@@ -198,5 +198,10 @@
     "date": "2026-10-12",
     "day": 40,
     "entry": "Today I fixed a bug that only happened in one specific timezone. Fun times."
+  },
+  {
+    "date": "2026-10-13",
+    "day": 41,
+    "entry": "Learned about optimistic vs pessimistic locking in databases."
   }
 ]

@@ -162,3 +162,7 @@ Read about the difference between horizontal and vertical scaling.
 
 Today I fixed a bug that only happened in one specific timezone. Fun times.
 
+## 2026-10-13 (day 41)
+
+Learned about optimistic vs pessimistic locking in databases.
+
