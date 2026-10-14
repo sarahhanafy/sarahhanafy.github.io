@@ -166,3 +166,7 @@ Today I fixed a bug that only happened in one specific timezone. Fun times.
 
 Learned about optimistic vs pessimistic locking in databases.
 
+## 2026-10-14 (day 42)
+
+Spent time thinking about naming things. The hardest problem, as always.
+
