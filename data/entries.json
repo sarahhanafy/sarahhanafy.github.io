@@ -208,5 +208,10 @@
     "date": "2026-10-14",
     "day": 42,
     "entry": "Spent time thinking about naming things. The hardest problem, as always."
+  },
+  {
+    "date": "2026-10-15",
+    "day": 43,
+    "entry": "Today's curiosity: how git actually stores objects under the hood."
   }
 ]

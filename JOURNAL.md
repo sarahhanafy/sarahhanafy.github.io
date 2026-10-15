@@ -170,3 +170,7 @@ Learned about optimistic vs pessimistic locking in databases.
 
 Spent time thinking about naming things. The hardest problem, as always.
 
+## 2026-10-15 (day 43)
+
+Today's curiosity: how git actually stores objects under the hood.
+
