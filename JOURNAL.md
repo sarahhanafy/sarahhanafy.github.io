@@ -174,3 +174,7 @@ Spent time thinking about naming things. The hardest problem, as always.
 
 Today's curiosity: how git actually stores objects under the hood.
 
+## 2026-10-16 (day 44)
+
+Read up on rate limiting strategies -- token buckets are elegant.
+
