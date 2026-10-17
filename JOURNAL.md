@@ -178,3 +178,7 @@ Today's curiosity: how git actually stores objects under the hood.
 
 Read up on rate limiting strategies -- token buckets are elegant.
 
+## 2026-10-17 (day 45)
+
+Practiced writing commit messages that explain *why*, not just *what*.
+

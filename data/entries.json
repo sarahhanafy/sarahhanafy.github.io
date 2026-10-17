@@ -218,5 +218,10 @@
     "date": "2026-10-16",
     "day": 44,
     "entry": "Read up on rate limiting strategies -- token buckets are elegant."
+  },
+  {
+    "date": "2026-10-17",
+    "day": 45,
+    "entry": "Practiced writing commit messages that explain *why*, not just *what*."
   }
 ]
