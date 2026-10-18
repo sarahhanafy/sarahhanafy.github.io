@@ -182,3 +182,7 @@ Read up on rate limiting strategies -- token buckets are elegant.
 
 Practiced writing commit messages that explain *why*, not just *what*.
 
+## 2026-10-18 (day 46)
+
+Learned how service workers make offline-first apps possible.
+

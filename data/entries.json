@@ -223,5 +223,10 @@
     "date": "2026-10-17",
     "day": 45,
     "entry": "Practiced writing commit messages that explain *why*, not just *what*."
+  },
+  {
+    "date": "2026-10-18",
+    "day": 46,
+    "entry": "Learned how service workers make offline-first apps possible."
   }
 ]
