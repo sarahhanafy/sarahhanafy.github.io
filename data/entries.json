@@ -233,5 +233,10 @@
     "date": "2026-10-19",
     "day": 47,
     "entry": "Today I appreciated a well-designed API. Consistency really is a feature."
+  },
+  {
+    "date": "2026-10-20",
+    "day": 48,
+    "entry": "Explored GraphQL vs REST tradeoffs for a hypothetical project."
   }
 ]

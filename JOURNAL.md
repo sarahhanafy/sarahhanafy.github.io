@@ -190,3 +190,7 @@ Learned how service workers make offline-first apps possible.
 
 Today I appreciated a well-designed API. Consistency really is a feature.
 
+## 2026-10-20 (day 48)
+
+Explored GraphQL vs REST tradeoffs for a hypothetical project.
+
