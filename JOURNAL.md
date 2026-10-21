@@ -194,3 +194,7 @@ Today I appreciated a well-designed API. Consistency really is a feature.
 
 Explored GraphQL vs REST tradeoffs for a hypothetical project.
 
+## 2026-10-21 (day 49)
+
+Read about how browsers parse and render HTML step by step.
+

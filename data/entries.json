@@ -238,5 +238,10 @@
     "date": "2026-10-20",
     "day": 48,
     "entry": "Explored GraphQL vs REST tradeoffs for a hypothetical project."
+  },
+  {
+    "date": "2026-10-21",
+    "day": 49,
+    "entry": "Read about how browsers parse and render HTML step by step."
   }
 ]
