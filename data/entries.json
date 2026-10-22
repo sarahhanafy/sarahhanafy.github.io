@@ -243,5 +243,10 @@
     "date": "2026-10-21",
     "day": 49,
     "entry": "Read about how browsers parse and render HTML step by step."
+  },
+  {
+    "date": "2026-10-22",
+    "day": 50,
+    "entry": "Today's win: caught a bug in code review before it shipped."
   }
 ]
