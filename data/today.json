@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-22",
-  "day_number": 50,
-  "entry": "Today's win: caught a bug in code review before it shipped.",
-  "updated_at": "2026-10-22T18:58:28+00:00"
+  "date": "2026-10-23",
+  "day_number": 51,
+  "entry": "Learned about the actor model for concurrency. Different way of thinking.",
+  "updated_at": "2026-10-23T18:41:13+00:00"
 }

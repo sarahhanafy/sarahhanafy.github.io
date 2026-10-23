@@ -202,3 +202,7 @@ Read about how browsers parse and render HTML step by step.
 
 Today's win: caught a bug in code review before it shipped.
 
+## 2026-10-23 (day 51)
+
+Learned about the actor model for concurrency. Different way of thinking.
+
