@@ -222,3 +222,7 @@ Read about eventual consistency in distributed systems.
 
 Practiced a coding problem just for fun, no deadline attached.
 
+## 2026-10-28 (day 56)
+
+Learned how content security policies help prevent XSS attacks.
+

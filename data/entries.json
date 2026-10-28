@@ -273,5 +273,10 @@
     "date": "2026-10-27",
     "day": 55,
     "entry": "Practiced a coding problem just for fun, no deadline attached."
+  },
+  {
+    "date": "2026-10-28",
+    "day": 56,
+    "entry": "Learned how content security policies help prevent XSS attacks."
   }
 ]
