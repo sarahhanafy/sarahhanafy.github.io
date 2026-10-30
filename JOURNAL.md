@@ -230,3 +230,7 @@ Learned how content security policies help prevent XSS attacks.
 
 Today's small experiment: measuring page load time before optimizing anything.
 
+## 2026-10-30 (day 58)
+
+Read about the tradeoffs between monoliths and microservices, yet again.
+
