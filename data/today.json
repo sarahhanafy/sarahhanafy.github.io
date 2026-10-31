@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-30",
-  "day_number": 58,
-  "entry": "Read about the tradeoffs between monoliths and microservices, yet again.",
-  "updated_at": "2026-10-30T19:31:17+00:00"
+  "date": "2026-10-31",
+  "day_number": 59,
+  "entry": "Finally understood why closures capture variables by reference, not value.",
+  "updated_at": "2026-10-31T18:36:28+00:00"
 }

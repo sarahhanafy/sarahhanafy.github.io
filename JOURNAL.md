@@ -234,3 +234,7 @@ Today's small experiment: measuring page load time before optimizing anything.
 
 Read about the tradeoffs between monoliths and microservices, yet again.
 
+## 2026-10-31 (day 59)
+
+Finally understood why closures capture variables by reference, not value.
+

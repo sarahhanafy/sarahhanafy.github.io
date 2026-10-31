@@ -288,5 +288,10 @@
     "date": "2026-10-30",
     "day": 58,
     "entry": "Read about the tradeoffs between monoliths and microservices, yet again."
+  },
+  {
+    "date": "2026-10-31",
+    "day": 59,
+    "entry": "Finally understood why closures capture variables by reference, not value."
   }
 ]
