@@ -238,3 +238,7 @@ Read about the tradeoffs between monoliths and microservices, yet again.
 
 Finally understood why closures capture variables by reference, not value.
 
+## 2026-11-01 (day 60)
+
+Spent an hour debugging a typo in an env var name. Classic.
+

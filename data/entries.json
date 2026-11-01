@@ -293,5 +293,10 @@
     "date": "2026-10-31",
     "day": 59,
     "entry": "Finally understood why closures capture variables by reference, not value."
+  },
+  {
+    "date": "2026-11-01",
+    "day": 60,
+    "entry": "Spent an hour debugging a typo in an env var name. Classic."
   }
 ]

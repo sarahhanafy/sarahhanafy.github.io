@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-31",
-  "day_number": 59,
-  "entry": "Finally understood why closures capture variables by reference, not value.",
-  "updated_at": "2026-10-31T18:36:28+00:00"
+  "date": "2026-11-01",
+  "day_number": 60,
+  "entry": "Spent an hour debugging a typo in an env var name. Classic.",
+  "updated_at": "2026-11-01T19:18:36+00:00"
 }
