@@ -298,5 +298,10 @@
     "date": "2026-11-01",
     "day": 60,
     "entry": "Spent an hour debugging a typo in an env var name. Classic."
+  },
+  {
+    "date": "2026-11-02",
+    "day": 61,
+    "entry": "Reading about CRDTs -- conflict-free replicated data types are wild."
   }
 ]

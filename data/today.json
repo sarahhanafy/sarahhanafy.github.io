@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-01",
-  "day_number": 60,
-  "entry": "Spent an hour debugging a typo in an env var name. Classic.",
-  "updated_at": "2026-11-01T19:18:36+00:00"
+  "date": "2026-11-02",
+  "day_number": 61,
+  "entry": "Reading about CRDTs -- conflict-free replicated data types are wild.",
+  "updated_at": "2026-11-02T23:01:56+00:00"
 }

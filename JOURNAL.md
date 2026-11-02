@@ -242,3 +242,7 @@ Finally understood why closures capture variables by reference, not value.
 
 Spent an hour debugging a typo in an env var name. Classic.
 
+## 2026-11-02 (day 61)
+
+Reading about CRDTs -- conflict-free replicated data types are wild.
+
