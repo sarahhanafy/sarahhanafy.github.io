@@ -246,3 +246,7 @@ Spent an hour debugging a typo in an env var name. Classic.
 
 Reading about CRDTs -- conflict-free replicated data types are wild.
 
+## 2026-11-03 (day 62)
+
+TIL: `git commit --fixup` + `git rebase --autosquash` is a nicer workflow than I expected.
+

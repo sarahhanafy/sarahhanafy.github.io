@@ -303,5 +303,10 @@
     "date": "2026-11-02",
     "day": 61,
     "entry": "Reading about CRDTs -- conflict-free replicated data types are wild."
+  },
+  {
+    "date": "2026-11-03",
+    "day": 62,
+    "entry": "TIL: `git commit --fixup` + `git rebase --autosquash` is a nicer workflow than I expected."
   }
 ]
