@@ -308,5 +308,10 @@
     "date": "2026-11-03",
     "day": 62,
     "entry": "TIL: `git commit --fixup` + `git rebase --autosquash` is a nicer workflow than I expected."
+  },
+  {
+    "date": "2026-11-04",
+    "day": 63,
+    "entry": "Refactored a function from 80 lines to 20. Same output, way less regret."
   }
 ]
