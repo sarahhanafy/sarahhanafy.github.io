@@ -318,5 +318,10 @@
     "date": "2026-11-05",
     "day": 64,
     "entry": "Trying out a new terminal font. Small joys."
+  },
+  {
+    "date": "2026-11-06",
+    "day": 65,
+    "entry": "Watched a talk on database indexing -- B-trees really do hold everything together."
   }
 ]
