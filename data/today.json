@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-06",
-  "day_number": 65,
-  "entry": "Watched a talk on database indexing -- B-trees really do hold everything together.",
-  "updated_at": "2026-11-06T21:00:06+00:00"
+  "date": "2026-11-07",
+  "day_number": 66,
+  "entry": "Wrote a test before the code for once. It caught a bug immediately.",
+  "updated_at": "2026-11-07T18:59:11+00:00"
 }
