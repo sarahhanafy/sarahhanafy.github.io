@@ -328,5 +328,10 @@
     "date": "2026-11-07",
     "day": 66,
     "entry": "Wrote a test before the code for once. It caught a bug immediately."
+  },
+  {
+    "date": "2026-11-08",
+    "day": 67,
+    "entry": "Learned the difference between `PUT` and `PATCH` the hard way."
   }
 ]
