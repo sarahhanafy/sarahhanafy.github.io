@@ -270,3 +270,7 @@ Wrote a test before the code for once. It caught a bug immediately.
 
 Learned the difference between `PUT` and `PATCH` the hard way.
 
+## 2026-11-09 (day 68)
+
+Today's win: deleted more code than I wrote.
+
