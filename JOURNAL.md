@@ -278,3 +278,7 @@ Today's win: deleted more code than I wrote.
 
 Experimenting with keyboard-only workflows. My mouse is jealous.
 
+## 2026-11-12 (day 71)
+
+Docker layer caching finally clicked for me today.
+
