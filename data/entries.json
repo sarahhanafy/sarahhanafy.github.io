@@ -348,5 +348,10 @@
     "date": "2026-11-12",
     "day": 71,
     "entry": "Docker layer caching finally clicked for me today."
+  },
+  {
+    "date": "2026-11-13",
+    "day": 72,
+    "entry": "Rubber-ducked a bug to my cat. She was unimpressed but it worked."
   }
 ]

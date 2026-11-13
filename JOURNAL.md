@@ -282,3 +282,7 @@ Experimenting with keyboard-only workflows. My mouse is jealous.
 
 Docker layer caching finally clicked for me today.
 
+## 2026-11-13 (day 72)
+
+Rubber-ducked a bug to my cat. She was unimpressed but it worked.
+
