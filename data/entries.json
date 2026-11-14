@@ -353,5 +353,10 @@
     "date": "2026-11-13",
     "day": 72,
     "entry": "Rubber-ducked a bug to my cat. She was unimpressed but it worked."
+  },
+  {
+    "date": "2026-11-14",
+    "day": 73,
+    "entry": "Learned about idempotency keys in payment APIs -- such a clean idea."
   }
 ]
