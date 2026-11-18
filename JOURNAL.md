@@ -298,3 +298,7 @@ Started sketching out a side project. No promises on when it ships.
 
 Explored WebAssembly for the first time. Faster than I expected to get running.
 
+## 2026-11-18 (day 77)
+
+Reminder to self: read the docs before Stack Overflow. Sometimes it's faster.
+
