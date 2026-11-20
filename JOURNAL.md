@@ -306,3 +306,7 @@ Reminder to self: read the docs before Stack Overflow. Sometimes it's faster.
 
 Cleaned up a messy CSS file. Flexbox saves the day again.
 
+## 2026-11-20 (day 79)
+
+Learned what a bloom filter is and now I want to use one everywhere.
+
