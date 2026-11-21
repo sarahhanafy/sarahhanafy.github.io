@@ -383,5 +383,10 @@
     "date": "2026-11-20",
     "day": 79,
     "entry": "Learned what a bloom filter is and now I want to use one everywhere."
+  },
+  {
+    "date": "2026-11-21",
+    "day": 80,
+    "entry": "Paired with a teammate on a tricky race condition. Two heads really did help."
   }
 ]
