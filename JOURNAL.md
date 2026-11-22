@@ -314,3 +314,7 @@ Learned what a bloom filter is and now I want to use one everywhere.
 
 Paired with a teammate on a tricky race condition. Two heads really did help.
 
+## 2026-11-22 (day 81)
+
+Today's rabbit hole: how CDNs decide which edge node serves you.
+

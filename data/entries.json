@@ -388,5 +388,10 @@
     "date": "2026-11-21",
     "day": 80,
     "entry": "Paired with a teammate on a tricky race condition. Two heads really did help."
+  },
+  {
+    "date": "2026-11-22",
+    "day": 81,
+    "entry": "Today's rabbit hole: how CDNs decide which edge node serves you."
   }
 ]
