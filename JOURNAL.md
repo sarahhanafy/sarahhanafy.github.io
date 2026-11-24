@@ -318,3 +318,7 @@ Paired with a teammate on a tricky race condition. Two heads really did help.
 
 Today's rabbit hole: how CDNs decide which edge node serves you.
 
+## 2026-11-24 (day 83)
+
+Revisited Big-O notation while reviewing a PR. Still useful after all these years.
+

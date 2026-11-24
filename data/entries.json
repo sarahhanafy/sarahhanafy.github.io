@@ -393,5 +393,10 @@
     "date": "2026-11-22",
     "day": 81,
     "entry": "Today's rabbit hole: how CDNs decide which edge node serves you."
+  },
+  {
+    "date": "2026-11-24",
+    "day": 83,
+    "entry": "Revisited Big-O notation while reviewing a PR. Still useful after all these years."
   }
 ]

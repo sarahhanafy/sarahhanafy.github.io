@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-22",
-  "day_number": 81,
-  "entry": "Today's rabbit hole: how CDNs decide which edge node serves you.",
-  "updated_at": "2026-11-22T21:00:58+00:00"
+  "date": "2026-11-24",
+  "day_number": 83,
+  "entry": "Revisited Big-O notation while reviewing a PR. Still useful after all these years.",
+  "updated_at": "2026-11-24T01:09:20+00:00"
 }
