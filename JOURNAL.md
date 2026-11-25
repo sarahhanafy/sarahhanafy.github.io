@@ -322,3 +322,7 @@ Today's rabbit hole: how CDNs decide which edge node serves you.
 
 Revisited Big-O notation while reviewing a PR. Still useful after all these years.
 
+## 2026-11-25 (day 84)
+
+Learned that `EXPLAIN ANALYZE` is a database's way of showing its work.
+

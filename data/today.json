@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-24",
-  "day_number": 83,
-  "entry": "Revisited Big-O notation while reviewing a PR. Still useful after all these years.",
-  "updated_at": "2026-11-24T23:55:45+00:00"
+  "date": "2026-11-25",
+  "day_number": 84,
+  "entry": "Learned that `EXPLAIN ANALYZE` is a database's way of showing its work.",
+  "updated_at": "2026-11-25T22:57:38+00:00"
 }
