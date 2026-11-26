@@ -403,5 +403,10 @@
     "date": "2026-11-25",
     "day": 84,
     "entry": "Learned that `EXPLAIN ANALYZE` is a database's way of showing its work."
+  },
+  {
+    "date": "2026-11-26",
+    "day": 85,
+    "entry": "Tried timeboxing my debugging sessions. Helped me step back and think clearer."
   }
 ]

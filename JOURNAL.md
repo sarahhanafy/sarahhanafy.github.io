@@ -326,3 +326,7 @@ Revisited Big-O notation while reviewing a PR. Still useful after all these year
 
 Learned that `EXPLAIN ANALYZE` is a database's way of showing its work.
 
+## 2026-11-26 (day 85)
+
+Tried timeboxing my debugging sessions. Helped me step back and think clearer.
+
